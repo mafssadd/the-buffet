@@ -194,16 +194,16 @@ h1,h2,h3{margin:0;font-weight:700}
 .book{width:var(--w,13px);height:var(--h,80%);border-radius:2px 2px 0 0;background:linear-gradient(transparent 12%,rgba(255,214,140,.55) 12% 15%,transparent 15% 82%,rgba(255,214,140,.55) 82% 85%,transparent 85%),var(--c,#7d3b2f);box-shadow:inset -3px 0 0 rgba(0,0,0,.22),inset 2px 0 0 rgba(255,255,255,.12)}
 .book--lean{transform:rotate(11deg);transform-origin:0 100%;margin-left:4px}
 .teapot{position:relative;z-index:1;width:28%;max-width:96px;height:auto;margin-bottom:-2px}
-.door{position:absolute;top:14px;bottom:14px;width:calc(50% - 14px);z-index:5;border:0;padding:0;cursor:pointer;background:var(--wood);transform-style:preserve-3d;transition:transform 1.4s cubic-bezier(.3,.75,.2,1);-webkit-tap-highlight-color:transparent}
+.door{position:absolute;top:14px;bottom:14px;width:calc(50% - 14px);z-index:5;border:11px solid;border-color:var(--oak-hi) var(--oak-2) #946a3f var(--oak);padding:0;cursor:pointer;background:transparent;transform-style:preserve-3d;transition:transform 1.4s cubic-bezier(.3,.75,.2,1);-webkit-tap-highlight-color:transparent;box-shadow:0 0 0 1px rgba(60,38,18,.35)}
 .door--l{left:14px;transform-origin:0 50%;border-radius:2px 0 0 2px}
 .door--r{right:14px;transform-origin:100% 50%;border-radius:0 2px 2px 0}
-.door::before{content:"";position:absolute;inset:11px;background:
+.door::before{content:"";position:absolute;inset:0;background:
   linear-gradient(118deg,rgba(255,255,255,.2),rgba(255,255,255,.03) 34%,rgba(255,255,255,.12) 47%,rgba(255,255,255,.02) 58%),
-  rgba(170,200,205,.07);box-shadow:inset 0 0 0 1px rgba(0,0,0,.35),inset 0 0 0 3px rgba(255,255,255,.08)}
-.door::after{content:"";position:absolute;left:11px;right:11px;top:calc(33.3% + 3px);height:calc(33.3% - 6px);border-top:7px solid var(--oak);border-bottom:7px solid var(--oak);box-shadow:0 -1px 0 rgba(0,0,0,.25),0 1px 0 rgba(0,0,0,.25)}
+  rgba(170,200,205,.06);box-shadow:inset 0 0 0 1px rgba(0,0,0,.35),inset 0 0 0 3px rgba(255,255,255,.08)}
+.door::after{content:"";position:absolute;left:0;right:0;top:calc(33.3% - 3px);height:33.3%;border-top:7px solid var(--oak);border-bottom:7px solid var(--oak);box-shadow:0 -1px 0 rgba(0,0,0,.25),0 1px 0 rgba(0,0,0,.25)}
 .door .knob{position:absolute;top:50%;width:11px;height:11px;margin-top:-5px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3c8,var(--brass) 50%,#6e5420);box-shadow:0 2px 3px rgba(0,0,0,.4);z-index:1}
-.door--l .knob{right:4px}
-.door--r .knob{left:4px}
+.door--l .knob{right:-11px}
+.door--r .knob{left:-11px}
 .cab.is-open .door--l{transform:rotateY(-108deg)}
 .cab.is-open .door--r{transform:rotateY(108deg)}
 .cab__drawers{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 14px 14px;background:linear-gradient(180deg,var(--oak),var(--oak-2))}
