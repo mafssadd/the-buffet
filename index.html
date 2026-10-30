@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!--
-  ДЕМО-ВЕРСИЯ сайта для the Buffet (Одинцово).
+  ДЕМО-ВЕРСИЯ сайта для the Buffet (Одинцово, Можайское шоссе, 55).
   Дизайн и разработка: Денис Стрепенюк, +7 977 393-80-33.
-  Тексты, цены, отзывы и фотографии — с Яндекс Карт и 2ГИС (октябрь 2026).
+  Тексты, отзывы и фотографии — с Яндекс Карт (октябрь 2026).
   Использование без согласования с разработчиком не допускается.
 -->
-<title>the Buffet — две кофейни в Одинцово: кофе, выпечка, домашние обеды (демо)</title>
-<meta name="description" content="Кофе от 110 ₽, выпечка и домашние обеды от хозяйки. Две кофейни в Одинцово: бульвар Любы Новосёловой, 18 и Можайское шоссе, 55. Предзаказ к нужному времени в WhatsApp.">
+<title>the Buffet — кафе-домик у медцентра, Можайское шоссе, 55, Одинцово (демо)</title>
+<meta name="description" content="Ароматный кофе и свежая, часто авторская выпечка в деревянном домике у медцентра на Можайском шоссе, 55 в Одинцово. Ежедневно 10:00–18:00. Позвоните — приготовят к вашему приходу.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="author" content="Денис Стрепенюк, +7 977 393-80-33">
 <meta name="theme-color" content="#161917">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="the Buffet — свой буфет на районе (демо-версия сайта)">
-<meta property="og:description" content="Кофе с меловой доски, витрина с ценниками-кнопками, предзаказ к нужному времени и расписки «С меня кофе». Разработка — Денис Стрепенюк.">
+<meta property="og:description" content="Деревянный домик с кофе и выпечкой у медцентра на Можайском. Предзаказ к нужному времени, кофе «в разрезе» и открытки «С меня кофе». Разработка — Денис Стрепенюк.">
 <meta property="og:image" content="https://mafssadd.github.io/the-buffet/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Golos+Text:wght@400;500;600;700&family=Marck+Script&family=Pacifico&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/foam-600.webp">
+<link rel="preload" as="image" href="img/plum-600.webp">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
@@ -38,9 +38,6 @@
   --chalk-3:rgba(239,233,221,.5);
   --chalk-4:rgba(239,233,221,.13);
   --yellow:#f0cf62;
-  --yellow-2:#e0b843;
-  --red:#b9332a;
-  --cream:#f3ebdc;
   --paper:#f5efe3;
   --ink:#27231e;
   --ink-2:#6d6358;
@@ -49,6 +46,9 @@
   --oak-2:#a77b4c;
   --oak-3:#76522f;
   --brass:#caa45e;
+  --tile:#a3352c;
+  --tile-2:#8e2c24;
+  --tile-line:#5c1913;
   --green:#97d38c;
   --wood:linear-gradient(180deg,var(--oak-hi),var(--oak) 38%,var(--oak-2));
   --f-chalk:'Amatic SC','Marck Script',cursive;
@@ -87,7 +87,6 @@ h1,h2,h3{margin:0;font-weight:700}
 .btn--paper{background:var(--paper);color:var(--ink)}
 .btn--paper:hover{background:#fff}
 .btn--sm{min-height:42px;padding:0 16px;font-size:14px}
-.btn[disabled]{opacity:.45;cursor:not-allowed}
 
 /* ---------- плашка демо и шапка ---------- */
 .demo-bar{position:relative;z-index:60;background:#0d0f0e;color:var(--chalk-2);border-bottom:1px solid rgba(240,207,98,.22);font:500 14px/1.35 var(--f-text)}
@@ -98,9 +97,8 @@ h1,h2,h3{margin:0;font-weight:700}
 .site-header{position:sticky;top:0;z-index:55;background:rgba(19,22,20,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(239,233,221,.07)}
 .site-header>.wrap{position:relative;display:flex;align-items:center;gap:18px;min-height:70px}
 .logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--chalk);flex:none}
-.logo__badge{position:relative;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--chalk-3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px}
-.logo__badge svg{width:19px;height:19px;fill:none;stroke:var(--chalk);stroke-width:1.6;stroke-linejoin:round}
-.logo__badge i{font:700 7px/1 var(--f-text);letter-spacing:.16em;font-style:normal;color:var(--chalk-2);margin-left:.16em}
+.logo__badge{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--chalk-3);display:grid;place-items:center}
+.logo__badge svg{width:22px;height:22px;fill:none;stroke:var(--chalk);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .logo__word{position:relative;font:400 30px/1 var(--f-logo);padding:4px 0 6px 16px}
 .logo__word small{position:absolute;left:0;top:-4px;font:400 15px/1 var(--f-logo);color:var(--chalk-2)}
 .nav{display:flex;align-items:center;gap:2px;margin-left:auto}
@@ -119,19 +117,23 @@ h1,h2,h3{margin:0;font-weight:700}
 .owner-hint::before{content:"";position:absolute;top:-7px;right:58px;width:14px;height:14px;background:var(--paper);transform:rotate(45deg)}
 .owner-hint button{position:absolute;top:6px;right:8px;background:none;border:0;font:600 20px/1 var(--f-text);color:var(--ink-2);cursor:pointer;padding:4px 6px}
 
-/* ---------- маркиза ---------- */
-.awning-wrap{position:relative;z-index:3;filter:drop-shadow(0 14px 16px rgba(0,0,0,.5));pointer-events:none}
-.awning{height:clamp(42px,5.4vw,64px);background:
-  linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.06) 42%,rgba(255,255,255,.07) 68%,rgba(0,0,0,.22)),
-  repeating-linear-gradient(90deg,var(--red) 0 34px,var(--cream) 34px 68px);
-  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 16px) no-repeat,radial-gradient(circle at 50% 0,#000 15.5px,transparent 16.5px) bottom left/34px 16px repeat-x;
-  mask:linear-gradient(#000 0 0) top/100% calc(100% - 16px) no-repeat,radial-gradient(circle at 50% 0,#000 15.5px,transparent 16.5px) bottom left/34px 16px repeat-x;
-  transform-origin:50% 0}
-.js .awning{animation:unroll 1s cubic-bezier(.2,.9,.25,1.12) .1s both}
-@keyframes unroll{from{transform:scaleY(.06)}to{transform:none}}
+/* ---------- черепичная крыша домика ---------- */
+.roof-wrap{position:relative;z-index:3;filter:drop-shadow(0 12px 14px rgba(0,0,0,.5));pointer-events:none}
+.roof{position:relative;height:clamp(44px,5.2vw,62px);background:
+  linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,0) 46%,rgba(0,0,0,.18)),
+  radial-gradient(circle at 50% 0,var(--tile) 0 12.5px,var(--tile-line) 13px 14.6px,transparent 15px) 0 0/30px 15px,
+  radial-gradient(circle at 50% 0,var(--tile-2) 0 12.5px,var(--tile-line) 13px 14.6px,transparent 15px) 15px 7.5px/30px 15px,
+  var(--tile-line)}
+.roof::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:9px;background:linear-gradient(180deg,#3a3f3c,#232725);box-shadow:0 1px 0 rgba(255,255,255,.08) inset}
+.dormer{position:absolute;bottom:2px;width:clamp(44px,4.6vw,60px);aspect-ratio:2/1;margin-left:calc(clamp(44px,4.6vw,60px)/-2);border-radius:999px 999px 0 0;background:radial-gradient(circle at 50% 100%,#4a3a2a,#2a221b 70%);box-shadow:0 0 0 4px #efe7d8,0 0 0 7px var(--tile-line),0 -6px 0 6px var(--tile);overflow:hidden;transition:background .8s}
+.dormer::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;margin-left:-1.5px;background:#efe7d8}
+.dormer::after{content:"";position:absolute;left:0;right:0;bottom:38%;height:3px;background:#efe7d8}
+.dormer.is-lit{background:radial-gradient(circle at 50% 100%,#ffe2a4,#f0a64e 62%,#9a4e1d)}
+.js .roof{animation:drop .9s cubic-bezier(.2,.9,.25,1.12) .1s both}
+@keyframes drop{from{transform:translateY(-70%)}to{transform:none}}
 
 /* ---------- первый экран ---------- */
-.hero{position:relative;padding:clamp(18px,4vw,48px) 0 clamp(70px,9vw,120px);overflow:hidden}
+.hero{position:relative;padding:clamp(38px,4.4vw,56px) 0 clamp(70px,9vw,120px);overflow:hidden}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(28px,5vw,80px);align-items:center}
 .eyebrow{margin:0 0 6px;font:400 27px/1.1 var(--f-hand);color:var(--yellow)}
 .hero__title{margin-top:.1em;font:700 clamp(76px,10.6vw,150px)/1 var(--f-chalk);letter-spacing:.005em;text-transform:uppercase}
@@ -183,17 +185,15 @@ h1,h2,h3{margin:0;font-weight:700}
   linear-gradient(180deg,#2c231c,#1d1712);box-shadow:inset 0 0 0 1px rgba(0,0,0,.45),inset 0 20px 30px rgba(0,0,0,.45)}
 .shelf{position:relative;display:flex;align-items:flex-end;justify-content:space-evenly;gap:6px;padding:0 10px 13px}
 .shelf::after{content:"";position:absolute;left:0;right:0;bottom:0;height:13px;background:linear-gradient(180deg,var(--oak-hi),var(--oak-2));box-shadow:0 7px 12px rgba(0,0,0,.5);z-index:2}
-.plate{position:relative;z-index:1;width:28%;max-width:104px;aspect-ratio:1;margin:0 0 3px;padding:0;border:0;background:none;cursor:zoom-in;border-radius:50%;transition:transform .3s cubic-bezier(.3,1.4,.5,1)}
-.plate:hover{transform:translateY(-4px) rotate(-3deg)}
+.plate{position:relative;z-index:1;display:block;width:28%;max-width:104px;aspect-ratio:1;margin:0 0 3px;padding:0;border:0;background:none;border-radius:50%;transition:transform .3s cubic-bezier(.3,1.4,.5,1)}
+button.plate{cursor:zoom-in}
+button.plate:hover{transform:translateY(-4px) rotate(-3deg)}
 .plate::before{content:"";position:absolute;inset:-21%;background:var(--doily) center/contain no-repeat;z-index:-1;filter:drop-shadow(0 4px 5px rgba(0,0,0,.45))}
 .plate img{width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 0 0 4px #f3eee4,0 0 0 5px rgba(0,0,0,.18),0 8px 14px rgba(0,0,0,.45)}
 .plate--big{width:36%;max-width:132px}
 .slate{position:relative;z-index:1;padding:7px 10px 6px;border-radius:3px;background:#181a19;box-shadow:0 0 0 2px #2e302f,0 8px 12px rgba(0,0,0,.45);font:400 15px/1.05 var(--f-hand);color:#f4f1ea;text-align:center;transform:rotate(-5deg);margin-bottom:6px}
 .slate b{display:block;margin-top:2px;font:700 21px/1 var(--f-chalk);color:var(--yellow)}
 .slate--r{transform:rotate(4deg)}
-.books{position:relative;z-index:1;display:flex;align-items:flex-end;gap:2px;height:76%}
-.book{width:var(--w,13px);height:var(--h,80%);border-radius:2px 2px 0 0;background:linear-gradient(transparent 12%,rgba(255,214,140,.55) 12% 15%,transparent 15% 82%,rgba(255,214,140,.55) 82% 85%,transparent 85%),var(--c,#7d3b2f);box-shadow:inset -3px 0 0 rgba(0,0,0,.22),inset 2px 0 0 rgba(255,255,255,.12)}
-.book--lean{transform:rotate(11deg);transform-origin:0 100%;margin-left:4px}
 .teapot{position:relative;z-index:1;width:28%;max-width:96px;height:auto;margin-bottom:-2px}
 .door{position:absolute;top:14px;bottom:14px;width:calc(50% - 14px);z-index:5;border:11px solid;border-color:var(--oak-hi) var(--oak-2) #946a3f var(--oak);padding:0;cursor:pointer;background:transparent;transform-style:preserve-3d;transition:transform 1.4s cubic-bezier(.3,.75,.2,1);-webkit-tap-highlight-color:transparent;box-shadow:0 0 0 1px rgba(60,38,18,.35)}
 .door--l{left:14px;transform-origin:0 50%;border-radius:2px 0 0 2px}
@@ -215,7 +215,7 @@ h1,h2,h3{margin:0;font-weight:700}
 .cab__plinth{position:relative;height:18px;margin:0 -6px;border-radius:0 0 3px 3px;background:linear-gradient(180deg,var(--oak-2),var(--oak-3));font:500 9.5px/18px var(--f-text);letter-spacing:.08em;text-align:center;color:rgba(255,236,205,.55)}
 .cab__legs{display:flex;justify-content:space-between;padding:0 16px}
 .cab__legs i{width:18px;height:22px;background:linear-gradient(90deg,var(--oak-3),var(--oak-2));clip-path:polygon(0 0,100% 0,78% 100%,22% 100%)}
-.postcard{position:absolute;right:-30px;bottom:96px;z-index:7;width:196px;padding:16px 15px 12px;background:var(--paper);color:var(--ink);transform:rotate(6deg);box-shadow:0 16px 24px rgba(0,0,0,.45);border-radius:2px}
+.postcard{position:absolute;right:-30px;bottom:96px;z-index:7;width:196px;padding:16px 15px 12px;background:var(--paper);color:var(--ink);transform:rotate(6deg);box-shadow:0 16px 24px rgba(0,0,0,.45);border-radius:2px;margin:0}
 .postcard::before{content:"";position:absolute;top:-10px;left:50%;width:64px;height:20px;margin-left:-32px;background:rgba(243,235,220,.6);transform:rotate(-4deg);box-shadow:0 1px 2px rgba(0,0,0,.15)}
 .postcard p{font:400 19px/1.22 var(--f-hand)}
 .postcard small{display:block;margin-top:8px;font:500 12px/1.3 var(--f-text);color:var(--ink-2)}
@@ -231,37 +231,33 @@ h1,h2,h3{margin:0;font-weight:700}
 .h2{font:700 clamp(50px,6.6vw,92px)/1 var(--f-chalk);letter-spacing:.01em}
 .sec__lead{max-width:660px;margin-top:18px;font-size:18px;color:var(--chalk-2)}
 .sec__head{position:relative}
-.sec__head .owner-note{margin-top:24px}
 
 /* ---------- кофе ---------- */
 .coffee__grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(24px,4vw,56px);margin-top:46px;align-items:start}
 .frame{padding:14px;border-radius:6px;background:var(--wood);box-shadow:0 30px 50px rgba(0,0,0,.45),inset 0 2px 0 rgba(255,255,255,.3)}
-.board{position:relative;padding:clamp(18px,3vw,34px) clamp(16px,3vw,34px) clamp(20px,3vw,30px);border-radius:2px;background:
+.board{position:relative;padding:clamp(18px,3vw,34px) clamp(18px,3vw,34px) clamp(20px,3vw,30px);border-radius:2px;background:
   radial-gradient(260px 160px at 18% 22%,rgba(255,255,255,.045),transparent 70%),
   radial-gradient(320px 200px at 82% 70%,rgba(255,255,255,.035),transparent 70%),
   radial-gradient(200px 120px at 60% 8%,rgba(255,255,255,.03),transparent 70%),
   #1c211e;box-shadow:inset 0 0 0 1px rgba(0,0,0,.5),inset 0 0 40px rgba(0,0,0,.45)}
-.board__head,.drink{display:grid;grid-template-columns:minmax(0,1fr) repeat(3,minmax(46px,64px));align-items:center;column-gap:4px}
-.board__head{align-items:end;padding-bottom:12px;margin-bottom:8px;border-bottom:1.5px dashed var(--chalk-4)}
+.board__head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-bottom:12px;margin-bottom:8px;border-bottom:1.5px dashed var(--chalk-4)}
 .board__title{font:700 clamp(54px,6vw,72px)/.85 var(--f-chalk);color:var(--yellow);letter-spacing:.03em}
-.board__size{text-align:center;font:700 25px/1 var(--f-chalk);color:var(--chalk)}
-.board__size small{display:block;margin-top:2px;font:400 12px/1 var(--f-text);color:var(--chalk-3)}
+.board__hint{font:400 21px/1 var(--f-hand);color:var(--chalk-3);padding-bottom:4px}
 .drinks{list-style:none;margin:0;padding:0}
-.drink{position:relative;width:100%;padding:5px 0;border:0;background:none;cursor:pointer;text-align:left;color:var(--chalk)}
-.drink__n{font:700 clamp(28px,3vw,36px)/1.05 var(--f-chalk);letter-spacing:.02em;transition:color .2s}
-.drink__p{text-align:center;font:700 clamp(26px,2.8vw,32px)/1 var(--f-chalk);color:var(--yellow)}
-.drink__p:empty::before{content:"–";color:var(--chalk-4)}
-.drink__p--one{grid-column:2/5}
-.drink .circ{position:absolute;left:-22px;top:-3px;width:calc(100% + 36px);height:calc(100% + 6px);pointer-events:none;overflow:visible}
+.drink{position:relative;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center;column-gap:16px;width:100%;padding:10px 4px 10px 16px;border:0;background:none;cursor:pointer;text-align:left;color:var(--chalk)}
+.drink__n{font:700 clamp(30px,3.2vw,40px)/1.05 var(--f-chalk);letter-spacing:.02em;transition:color .2s}
+.drink__r{font:400 clamp(17px,1.7vw,21px)/1.2 var(--f-hand);color:var(--chalk-2);text-align:right}
+.drink .circ{position:absolute;left:-10px;top:-1px;width:calc(100% + 20px);height:calc(100% + 2px);pointer-events:none;overflow:visible}
 .drink .circ path{fill:none;stroke:var(--chalk);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .7s ease,opacity .2s;opacity:0}
 .drink[aria-checked="true"] .circ path{stroke-dashoffset:0;opacity:.85}
+.drink[aria-checked="true"] .drink__n{color:var(--yellow)}
 .drink:hover .drink__n{color:#fff}
 .board__add{margin-top:14px;padding-top:14px;border-top:1.5px dashed var(--chalk-4);font:700 clamp(21px,2.2vw,25px)/1.25 var(--f-chalk);color:var(--chalk-2)}
-.board__add b{color:var(--yellow)}
+.board__add a{color:var(--yellow);text-decoration:none}
 .brew{position:sticky;top:94px;padding:clamp(20px,2.6vw,30px);border-radius:24px;background:var(--bg-2);box-shadow:inset 0 0 0 1px var(--chalk-4),0 24px 50px rgba(0,0,0,.3)}
-.stage{position:relative;height:310px;display:flex;align-items:flex-end;justify-content:center;padding-right:150px;margin-bottom:6px}
+.stage{position:relative;height:300px;display:flex;align-items:flex-end;justify-content:center;padding-right:150px;margin-bottom:6px}
 .stage::after{content:"";position:absolute;left:12%;right:30%;bottom:-6px;height:12px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent)}
-.glass{position:relative;width:134px;height:var(--gh,200px);transition:height .55s cubic-bezier(.3,1.35,.5,1)}
+.glass{position:relative;width:134px;height:var(--gh,220px);transition:height .55s cubic-bezier(.3,1.35,.5,1)}
 .glass__clip{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,90% 100%,10% 100%);background:rgba(255,255,255,.045)}
 .layer{position:absolute;left:0;right:0;bottom:0;height:0;transition:height .6s ease,bottom .6s ease,background-color .45s}
 .layer.is-foam{background-image:radial-gradient(circle at 18% 40%,rgba(255,255,255,.75) 0 2px,transparent 2.6px),radial-gradient(circle at 62% 70%,rgba(255,255,255,.6) 0 1.6px,transparent 2.2px),radial-gradient(circle at 80% 28%,rgba(255,255,255,.65) 0 2.4px,transparent 3px);background-size:22px 16px,17px 13px,26px 19px}
@@ -276,51 +272,34 @@ h1,h2,h3{margin:0;font-weight:700}
 @keyframes steam{0%{transform:translateY(10px) scaleY(.6);opacity:0}30%{opacity:.9}100%{transform:translateY(-16px) scaleY(1.1) skewX(-8deg);opacity:0}}
 .lbl{position:absolute;left:calc(100% + 40px);white-space:nowrap;font:400 19px/1 var(--f-hand);color:var(--chalk-2);transform:translateY(50%);transition:bottom .6s ease,opacity .3s}
 .lbl::before{content:"";position:absolute;right:calc(100% + 6px);top:55%;width:30px;border-top:1.5px dashed var(--chalk-3)}
-.sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
-.size{padding:10px 4px 9px;border-radius:14px;border:1.5px solid var(--chalk-4);background:none;cursor:pointer;text-align:center;transition:border-color .2s,background .2s}
-.size b{display:block;font:700 28px/1 var(--f-chalk)}
-.size small{font-size:13px;color:var(--chalk-3)}
-.size[aria-checked="true"]{border-color:var(--yellow);background:rgba(240,207,98,.08)}
-.size[aria-checked="true"] b{color:var(--yellow)}
-.size:disabled{opacity:.28;cursor:not-allowed}
 .opt-title{margin:18px 0 8px;font:500 13px/1 var(--f-text);letter-spacing:.08em;text-transform:uppercase;color:var(--chalk-3)}
 .chips-pick{display:flex;flex-wrap:wrap;gap:6px}
 .pick{min-height:38px;padding:0 13px;border-radius:999px;border:1.5px solid var(--chalk-4);background:none;cursor:pointer;font:500 14px/1 var(--f-text);color:var(--chalk-2);transition:border-color .2s,color .2s,background .2s}
 .pick:hover{color:var(--chalk)}
 .pick[aria-checked="true"],.pick[aria-pressed="true"]{border-color:var(--yellow);color:var(--chalk);background:rgba(240,207,98,.08)}
-.pick:disabled{opacity:.3;cursor:not-allowed}
 .brew__sum{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-top:20px;padding-top:16px;border-top:1.5px dashed var(--chalk-4)}
-.brew__sum span{font-size:15px;color:var(--chalk-2)}
-.brew__sum b{font:700 52px/.8 var(--f-chalk);color:var(--yellow);white-space:nowrap}
+.brew__sum b{font:700 44px/.9 var(--f-chalk);color:var(--yellow)}
+.brew__sum span{font-size:14px;color:var(--chalk-3);text-align:right}
 .brew .btn{width:100%;margin-top:16px}
 
-/* ---------- витрина ---------- */
-.case{margin-top:46px;padding:26px clamp(12px,3vw,34px) 6px;border-radius:20px 20px 8px 8px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.015) 60%);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.1),0 30px 60px rgba(0,0,0,.3);position:relative;overflow:hidden}
-.case::before{content:"";position:absolute;top:-30%;left:-10%;width:30%;height:160%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.035),transparent);transform:rotate(18deg);pointer-events:none}
-.case__row{position:relative;padding-bottom:30px;margin-bottom:22px}
-.case__row::after{content:"";position:absolute;left:calc(-1*clamp(12px,3vw,34px));right:calc(-1*clamp(12px,3vw,34px));bottom:0;height:12px;background:linear-gradient(180deg,var(--oak-hi),var(--oak-2));box-shadow:0 8px 14px rgba(0,0,0,.45)}
-.case__label{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-.case__label h3{font:700 clamp(34px,3.8vw,46px)/1 var(--f-chalk)}
-.case__label p{font-size:15px;color:var(--chalk-3)}
-.tags{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:18px 14px}
-.tag{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:112px;padding:13px 13px 11px;border:0;border-radius:4px;background:radial-gradient(120px 60px at 30% 20%,rgba(255,255,255,.05),transparent 70%),#171918;box-shadow:0 0 0 2px #2e3130,0 10px 18px rgba(0,0,0,.45);color:#f4f1ea;text-align:left;cursor:pointer;transform:rotate(var(--r,0deg));transition:transform .2s,box-shadow .2s}
-.tag:hover{transform:rotate(0) translateY(-4px);box-shadow:0 0 0 2px var(--yellow),0 16px 24px rgba(0,0,0,.5)}
-.tag__n{font:400 20px/1.15 var(--f-hand)}
-.tag__p{display:flex;justify-content:space-between;align-items:flex-end;gap:8px;margin-top:10px;font:700 32px/.8 var(--f-chalk);color:var(--yellow)}
-.tag__plus{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--chalk-3);display:grid;place-items:center;font:500 20px/1 var(--f-text);color:var(--chalk);flex:none}
-.tag:hover .tag__plus{background:var(--yellow);border-color:var(--yellow);color:#1c1a13}
-.tag__count{position:absolute;top:-9px;right:-9px;min-width:26px;height:26px;padding:0 7px;border-radius:13px;background:var(--yellow);color:#1c1a13;font:700 13px/26px var(--f-text);text-align:center;display:none;box-shadow:0 4px 8px rgba(0,0,0,.35)}
-.tag.has-count .tag__count{display:block}
-.tag--hot{background:radial-gradient(120px 60px at 30% 20%,rgba(255,255,255,.05),transparent 70%),#1a1817}
-.case__meta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:6px 0 24px}
-.case__meta p{max-width:620px;color:var(--chalk-2);font-size:16px}
-.case__meta b{color:var(--yellow);font-weight:600}
-.case__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
-.ph{position:relative;margin:0;border-radius:16px;overflow:hidden;background:#222}
-.ph img{width:100%;height:100%;object-fit:cover}
-.ph--43{aspect-ratio:4/3}
-.ph-wm{position:absolute;right:10px;bottom:9px;z-index:2;font:500 11px/1 var(--f-text);letter-spacing:.05em;color:rgba(255,255,255,.78);text-shadow:0 1px 3px rgba(0,0,0,.8);pointer-events:none}
-.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 26px;background:linear-gradient(transparent,rgba(0,0,0,.72));font:500 14px/1.3 var(--f-text);color:#fff}
+/* ---------- выпечка ---------- */
+.bakes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,28px);margin-top:46px}
+.bake{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:clamp(26px,3vw,36px) 18px 22px;border:0;border-radius:24px;background:radial-gradient(120% 70% at 50% 0%,rgba(255,196,110,.13),transparent 60%),var(--bg-2);box-shadow:inset 0 0 0 1px var(--chalk-4);cursor:pointer;text-align:center;color:var(--chalk);transition:transform .25s,box-shadow .25s}
+.bake:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1.5px var(--yellow),0 20px 40px rgba(0,0,0,.35)}
+.bake .plate{width:64%;max-width:200px;margin:22px 0 calc(min(64%,200px)*.21 + 8px)}
+.bake:hover .plate{transform:rotate(-4deg) scale(1.03)}
+.bake__wm{font:500 10px/1 var(--f-text);letter-spacing:.05em;color:var(--chalk-3)}
+.bake__n{font:400 clamp(22px,2.2vw,27px)/1.15 var(--f-hand)}
+.bake__d{font-size:14px;color:var(--chalk-3)}
+.bake__add{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:10px 16px;border-radius:999px;border:1.5px solid var(--chalk-4);font:600 14px/1 var(--f-text);transition:background .2s,color .2s,border-color .2s}
+.bake:hover .bake__add{background:var(--yellow);color:#1c1a13;border-color:var(--yellow)}
+.bake__count{position:absolute;top:14px;right:14px;min-width:30px;height:30px;padding:0 8px;border-radius:15px;background:var(--yellow);color:#1c1a13;font:700 14px/30px var(--f-text);text-align:center;display:none}
+.bake.has-count .bake__count{display:block}
+.bake--ask{cursor:default;justify-content:center;gap:14px;background:transparent;box-shadow:inset 0 0 0 1.5px rgba(240,207,98,.4);border:0}
+.bake--ask:hover{transform:none;box-shadow:inset 0 0 0 1.5px rgba(240,207,98,.4)}
+.bake--ask h3{font:700 clamp(40px,4vw,52px)/1 var(--f-chalk);color:var(--yellow)}
+.bake--ask p{max-width:280px;color:var(--chalk-2);font-size:16px}
+.bake--ask .btn{width:100%;max-width:280px}
 
 /* ---------- предзаказ ---------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,22px);margin-top:44px;counter-reset:st}
@@ -337,7 +316,6 @@ h1,h2,h3{margin:0;font-weight:700}
 .tray-fab{position:fixed;right:22px;bottom:22px;z-index:72;display:flex;align-items:center;gap:12px;padding:9px 20px 9px 10px;border:0;border-radius:999px;background:var(--paper);color:var(--ink);box-shadow:0 16px 32px rgba(0,0,0,.5);cursor:pointer;font:600 15px/1 var(--f-text);transform:translateY(160%);transition:transform .45s cubic-bezier(.3,1.4,.5,1)}
 .tray-fab.is-on{transform:none}
 .tray-fab svg{width:46px;height:30px}
-.tray-fab b{font:700 28px/.8 var(--f-chalk)}
 .tray-fab__n{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:12px;background:var(--ink);color:var(--paper);font:700 13px/1 var(--f-text)}
 .bump{animation:bump .5s}
 @keyframes bump{30%{transform:scale(1.12)}60%{transform:scale(.96)}}
@@ -357,32 +335,26 @@ dialog{color:inherit}
   mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 51% repeat-x,conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/16px 51% repeat-x}
 .receipt__top{display:flex;justify-content:space-between;gap:10px;padding-bottom:10px;border-bottom:1.5px dashed rgba(39,35,30,.3);font:600 12px/1.3 var(--f-text);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
 .lines{list-style:none;margin:0;padding:0}
-.line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:11px 0;border-bottom:1px dashed rgba(39,35,30,.2)}
+.line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px dashed rgba(39,35,30,.2)}
 .line__n{font-weight:500}
-.line__s{font:700 26px/1 var(--f-chalk);text-align:right}
-.qty{display:inline-flex;align-items:center;gap:2px;grid-column:1/-1;font-size:14px;color:var(--ink-2)}
+.qty{display:inline-flex;align-items:center;gap:2px;font-size:14px;color:var(--ink-2)}
 .qty button{width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(39,35,30,.25);background:none;color:var(--ink);cursor:pointer;font:600 16px/1 var(--f-text)}
 .qty button:hover{border-color:var(--ink)}
 .qty span{min-width:30px;text-align:center;font-weight:600;color:var(--ink)}
-.qty em{margin-left:6px;font-style:normal}
 .empty{padding:14px 0 6px;color:var(--ink-2)}
 .empty p{margin-bottom:12px}
 .quick{display:flex;flex-wrap:wrap;gap:6px}
 .quick button{min-height:36px;padding:0 12px;border-radius:999px;border:1.5px solid rgba(39,35,30,.25);background:none;color:var(--ink);cursor:pointer;font:500 13px/1 var(--f-text)}
 .quick button:hover{border-color:var(--ink)}
-.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;font:700 40px/1 var(--f-chalk)}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:14px}
 .total span{font:600 14px/1 var(--f-text);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
-.stamp{position:absolute;left:36%;bottom:30px;transform:rotate(-11deg);padding:6px 10px;border:2.5px solid rgba(185,51,42,.75);border-radius:6px;color:rgba(185,51,42,.85);font:800 11px/1.2 var(--f-text);letter-spacing:.1em;text-align:center;pointer-events:none;mix-blend-mode:multiply}
+.total b{font:700 34px/1 var(--f-chalk)}
+.total__note{margin-top:6px;font-size:13px;color:var(--ink-2)}
+.stamp{position:absolute;left:38%;bottom:34px;transform:rotate(-11deg);padding:6px 10px;border:2.5px solid rgba(185,51,42,.75);border-radius:6px;color:rgba(185,51,42,.85);font:800 11px/1.2 var(--f-text);letter-spacing:.1em;text-align:center;pointer-events:none;mix-blend-mode:multiply}
 .tray h3{margin:24px 0 10px;font:500 13px/1 var(--f-text);letter-spacing:.1em;text-transform:uppercase;color:var(--chalk-3)}
-.locs{display:grid;gap:8px}
-.loc{position:relative;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center;padding:13px 14px;border-radius:14px;border:1.5px solid var(--chalk-4);cursor:pointer;transition:border-color .2s,background .2s}
-.loc input{position:absolute;opacity:0;pointer-events:none}
-.loc i{grid-row:span 2;width:20px;height:20px;border-radius:50%;border:2px solid var(--chalk-3)}
-.loc b{font-weight:600}
-.loc small{font-size:13px;color:var(--chalk-3)}
-.loc:has(input:checked){border-color:var(--yellow);background:rgba(240,207,98,.07)}
-.loc:has(input:checked) i{border:6px solid var(--yellow)}
-.loc:has(input:focus-visible){outline:2px dashed var(--yellow);outline-offset:2px}
+.tray__where{display:flex;align-items:center;gap:12px;margin-top:16px;padding:13px 14px;border-radius:14px;box-shadow:inset 0 0 0 1.5px var(--chalk-4)}
+.tray__where b{display:block;font-weight:600}
+.tray__where small{font-size:13px;color:var(--chalk-3)}
 .when{display:flex;flex-wrap:wrap;gap:6px}
 .time-in{display:none;margin-top:10px}
 .time-in.is-on{display:block}
@@ -390,6 +362,7 @@ dialog{color:inherit}
 .field input,.field select{width:100%;min-height:48px;padding:0 14px;border-radius:12px;border:1.5px solid var(--chalk-4);background:var(--bg);color:var(--chalk);font:500 16px var(--f-text)}
 .field input:focus,.field select:focus{border-color:var(--yellow);outline:0}
 .field input[type="time"]{color-scheme:dark}
+.fields{display:grid;gap:8px}
 .warn{margin-top:10px;padding:10px 12px;border-radius:10px;background:rgba(185,51,42,.16);color:#ffcbc2;font-size:14px;line-height:1.4}
 .tray__eta{margin-top:10px;font-size:14px;color:var(--chalk-2)}
 .tray__eta b{color:var(--yellow);font-weight:600}
@@ -407,14 +380,16 @@ dialog{color:inherit}
 .iou__preview canvas{display:block;width:100%;max-width:470px;height:auto;margin:0 auto;border-radius:6px;box-shadow:0 34px 60px rgba(0,0,0,.55);transform:rotate(1.6deg)}
 .iou__preview .owner-note{margin:34px auto 0}
 
-/* ---------- адреса ---------- */
-.places{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,30px);margin-top:46px}
-.place{position:relative;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:var(--bg-2);box-shadow:inset 0 0 0 1px var(--chalk-4)}
-.place__ph{position:relative;aspect-ratio:16/10;background:#222;cursor:zoom-in;border:0;padding:0;display:block;width:100%}
-.place__ph img{width:100%;height:100%;object-fit:cover}
-.place__nick{position:absolute;left:16px;top:16px;z-index:2;padding:8px 12px 7px;border-radius:4px;background:#171918;box-shadow:0 0 0 2px #2e3130,0 8px 14px rgba(0,0,0,.4);font:400 19px/1 var(--f-hand);color:#f4f1ea;transform:rotate(-3deg)}
-.place__body{display:flex;flex-direction:column;flex:1;padding:22px clamp(18px,2.4vw,28px) 26px}
-.place__addr{font:700 clamp(36px,3.6vw,46px)/1 var(--f-chalk)}
+/* ---------- домик ---------- */
+.house{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(18px,3vw,36px);margin-top:46px;align-items:start}
+.house__ph{position:relative;border-radius:24px;overflow:hidden;background:#222;aspect-ratio:4/3}
+.house__ph>button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.house__ph img{width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.season{position:absolute;left:16px;top:16px;z-index:3;display:flex;gap:6px;padding:5px;border-radius:999px;background:rgba(17,19,18,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.season .pick{min-height:34px;border-color:transparent;color:var(--chalk)}
+.ph-wm{position:absolute;right:10px;bottom:9px;z-index:2;font:500 11px/1 var(--f-text);letter-spacing:.05em;color:rgba(255,255,255,.78);text-shadow:0 1px 3px rgba(0,0,0,.8);pointer-events:none}
+.house__info{display:flex;flex-direction:column;padding:clamp(20px,2.6vw,30px);border-radius:24px;background:var(--bg-2);box-shadow:inset 0 0 0 1px var(--chalk-4)}
+.place__addr{font:700 clamp(38px,3.8vw,50px)/1 var(--f-chalk)}
 .place__st{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:15px;color:var(--chalk-2)}
 .place__st i{width:9px;height:9px;border-radius:50%;background:#77736b;flex:none}
 .place__st.is-open i{background:var(--green);box-shadow:0 0 0 4px rgba(151,211,140,.16)}
@@ -426,7 +401,7 @@ dialog{color:inherit}
 .place__facts a{text-decoration:none;border-bottom:1px solid var(--chalk-4)}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
 .chip{padding:7px 12px;border-radius:999px;background:var(--chalk-4);font:500 13px/1 var(--f-text);color:var(--chalk-2)}
-.place__btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:22px}
+.place__btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .place__btns .btn{flex:1 1 auto}
 .map{position:relative;margin-top:26px;border-radius:24px;overflow:hidden;min-height:360px;background:radial-gradient(400px 200px at 30% 30%,rgba(255,255,255,.04),transparent),var(--bg-2);box-shadow:inset 0 0 0 1px var(--chalk-4);display:grid;place-items:center;text-align:center}
 .map p{margin:0 0 14px;color:var(--chalk-2);padding:0 16px}
@@ -445,10 +420,10 @@ dialog{color:inherit}
 .score__big{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .score__big b{font:700 76px/.8 var(--f-chalk);color:var(--yellow)}
 .score__big span{font-size:15px;color:var(--chalk-2)}
-.score__sub{margin-top:8px;font-size:14px;color:var(--chalk-3)}
-.bars{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:11px}
-.bars li{display:grid;grid-template-columns:96px 1fr 40px;align-items:center;gap:10px;font-size:14px;color:var(--chalk-2)}
-.bars em{font-style:normal;text-align:right;color:var(--chalk);font-weight:600}
+.score__sub{margin-top:14px;font-size:14px;color:var(--chalk-3)}
+.bars{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:11px}
+.bars li{display:grid;grid-template-columns:84px 1fr 44px;align-items:center;gap:10px;font-size:14px;color:var(--chalk-2)}
+.bars em{font-style:normal;text-align:right;color:var(--chalk);font-weight:600;white-space:nowrap}
 .bar{height:9px;border-radius:6px;background:var(--chalk-4);overflow:hidden}
 .bar i{display:block;height:100%;width:0;border-radius:6px;background:var(--chalk);transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
 .score.in .bar i{width:var(--v)}
@@ -465,7 +440,7 @@ dialog{color:inherit}
 
 /* ---------- подвал ---------- */
 .foot{padding:70px 0 40px;background:#111312;border-top:1px solid var(--chalk-4)}
-.foot__grid{display:grid;grid-template-columns:1.1fr 1fr 1fr 1.25fr;gap:30px}
+.foot__grid{display:grid;grid-template-columns:1.1fr 1fr 1.3fr;gap:30px}
 .foot h3{margin-bottom:10px;font:700 30px/1 var(--f-chalk)}
 .foot p,.foot li{font-size:15px;color:var(--chalk-2)}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
@@ -475,7 +450,6 @@ dialog{color:inherit}
 .demo-card b{color:var(--yellow)}
 .demo-card p+p{margin-top:8px}
 .foot__bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:22px;border-top:1px solid var(--chalk-4);font-size:13px;color:var(--chalk-3)}
-.foot__bottom .owner-toggle{display:inline-flex}
 
 /* ---------- заметки владельца ---------- */
 .owner-note{display:none;position:relative;max-width:360px;background:#fff1b8;color:#2d2717;padding:18px 20px 16px;font:400 15.5px/1.5 var(--f-text);box-shadow:0 14px 26px rgba(0,0,0,.45);transform:rotate(-1.4deg);border-radius:2px;z-index:8}
@@ -507,16 +481,6 @@ dialog{color:inherit}
 .lb__bar{display:flex;align-items:center;justify-content:center;gap:16px;padding-top:14px;color:var(--chalk);font:500 15px var(--f-text);text-align:center}
 .lb__btn{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--chalk-3);background:rgba(20,22,21,.7);color:var(--chalk);font:400 24px/1 var(--f-text);cursor:pointer;flex:none}
 .lb__close{position:absolute;top:10px;right:12px}
-.pickd{width:min(420px,calc(100vw - 24px));padding:0;border:0;border-radius:22px;background:var(--bg-2);box-shadow:0 30px 60px rgba(0,0,0,.6)}
-.pickd::backdrop{background:rgba(6,7,6,.6)}
-.pickd__in{padding:22px}
-.pickd h2{font:700 40px/1 var(--f-chalk);margin-bottom:14px;padding-right:50px}
-.pickd .x{position:absolute;top:14px;right:14px}
-.pickd__list{display:grid;gap:10px}
-.pickd__list a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 16px;border-radius:16px;background:var(--bg-3);text-decoration:none}
-.pickd__list a:hover{background:#2c322d}
-.pickd__list b{display:block;font-weight:600}
-.pickd__list small{color:var(--chalk-3);font-size:13px}
 .mbar{display:none}
 
 /* ---------- появление при прокрутке ---------- */
@@ -537,8 +501,11 @@ dialog{color:inherit}
   .hero__grid{grid-template-columns:1fr}
   .hero__title{font-size:clamp(76px,14vw,128px)}
   .cabinet{margin-top:10px}
-  .coffee__grid,.iou__grid,.notes__grid{grid-template-columns:1fr}
+  .coffee__grid,.iou__grid,.notes__grid,.house{grid-template-columns:1fr}
   .brew{position:relative;top:auto}
+  .bakes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bakes>.bake:first-child{grid-column:1/-1}
+  .bake--ask{grid-column:1/-1}
   .foot__grid{grid-template-columns:1fr 1fr}
   .is-owner .owner-row{flex-direction:column;align-items:center}
 }
@@ -552,17 +519,20 @@ dialog{color:inherit}
   .cab.is-open .door--l{transform:rotateY(-96deg)}
   .cab.is-open .door--r{transform:rotateY(96deg)}
   .postcard{position:relative;right:auto;bottom:auto;margin:-14px auto 0;transform:rotate(-2deg)}
-  .stage{height:290px;padding-right:128px}
+  .dormer:nth-child(2){display:none}
+  .stage{height:280px;padding-right:128px}
   .glass{width:118px}
   .lbl{left:calc(100% + 30px);font-size:17px}
   .lbl::before{width:22px}
+  .drink{grid-template-columns:minmax(0,1fr);row-gap:2px}
+  .drink__r{text-align:left}
   .steps{grid-template-columns:1fr}
-  .places{grid-template-columns:1fr}
-  .case__photos{grid-template-columns:1fr 1fr}
-  .case__photos .ph:nth-child(3){display:none}
-  .tags{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
-  .tag{min-height:104px;padding:12px 11px 10px}
-  .tag__n{font-size:18px}
+  .bakes{gap:12px}
+  .bake{padding:20px 10px 16px}
+  .bake .plate{width:72%;margin:16px 0 34px}
+  .bake__d{font-size:13px}
+  .bake__add{padding:9px 12px;font-size:13px}
+  .bakes>.bake:first-child .plate{width:46%}
   .form__row{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gal .w2{grid-column:span 2}
@@ -571,15 +541,10 @@ dialog{color:inherit}
   .ownernav{bottom:calc(84px + env(safe-area-inset-bottom))}
   .toast{bottom:calc(90px + env(safe-area-inset-bottom))}
   .mbar{position:fixed;left:0;right:0;bottom:0;z-index:74;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,19,18,.97);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid var(--chalk-4)}
-  .mbar button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:52px;padding:0 8px;border-radius:14px;border:0;background:var(--bg-3);font:600 14px/1.1 var(--f-text);cursor:pointer}
+  .mbar>*{display:flex;align-items:center;justify-content:center;gap:7px;min-height:52px;padding:0 8px;border-radius:14px;border:0;background:var(--bg-3);font:600 14px/1.1 var(--f-text);cursor:pointer;text-decoration:none;color:var(--chalk)}
   .mbar .mbar__tray{background:var(--yellow);color:#1c1a13}
-  .mbar__tray b{font:700 22px/.8 var(--f-chalk)}
 }
 @media (max-width:420px){
-  .board__head,.drink{grid-template-columns:minmax(0,1fr) repeat(3,42px)}
-  .board__size{font-size:21px}
-  .drink__n{font-size:27px}
-  .drink__p{font-size:25px}
   .plate{width:27%}
   .slate{font-size:13px;padding:6px 7px 5px}
   .slate b{font-size:18px}
@@ -592,7 +557,7 @@ dialog{color:inherit}
   .js .rv{opacity:1;transform:none}
   .steam{display:none}
 }
-@media print{.demo-bar,.site-header,.awning-wrap,.mbar,.badge,.ownernav,.wm,.tray-fab{display:none!important}}
+@media print{.demo-bar,.site-header,.roof-wrap,.mbar,.badge,.ownernav,.wm,.tray-fab{display:none!important}}
 </style>
 </head>
 <body>
@@ -614,15 +579,15 @@ dialog{color:inherit}
 <header class="site-header" id="header">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="the Buffet — наверх">
-      <span class="logo__badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 8.5h11l-1.5 12h-8z"/><path d="M5 6h14v2.5H5z"/><path d="M8 3.5h8l1 2.5H7z"/></svg><i>КОФЕ</i></span>
+      <span class="logo__badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 11h12v3.5a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M17 12.5h1.5a2 2 0 0 1 0 4H16.6"/><path d="M8.5 4.5c-.8 1 .8 1.8 0 3M12 4c-.8 1 .8 1.8 0 3"/><path d="M4 21h15"/></svg></span>
       <span class="logo__word"><small>the</small>Buffet</span>
     </a>
     <nav class="nav" id="nav" aria-label="Разделы">
       <a href="#coffee">Кофе</a>
-      <a href="#case">Витрина</a>
+      <a href="#bakes">Выпечка</a>
       <a href="#preorder">Предзаказ</a>
       <a href="#iou">С&nbsp;меня кофе</a>
-      <a href="#places">Адреса</a>
+      <a href="#house">Как найти</a>
       <a href="#notes">Отзывы</a>
       <button class="owner-toggle" type="button" role="switch" aria-checked="false" data-owner-toggle><span class="owner-toggle__track" aria-hidden="true"></span>Режим владельца</button>
     </nav>
@@ -631,7 +596,7 @@ dialog{color:inherit}
     <div class="owner-hint" id="ownerHint" hidden>Вы владелец the&nbsp;Buffet? Включите режим — на странице появятся заметки о том, как каждый блок приводит гостей.<button type="button" aria-label="Закрыть подсказку">×</button></div>
   </div>
 </header>
-<div class="awning-wrap" aria-hidden="true"><div class="awning"></div></div>
+<div class="roof-wrap" aria-hidden="true"><div class="roof"><i class="dormer" style="left:16%"></i><i class="dormer" style="left:50%"></i><i class="dormer" style="left:84%"></i></div></div>
 
 <main id="main">
 
@@ -639,12 +604,12 @@ dialog{color:inherit}
 <section class="hero" id="top" aria-labelledby="heroTitle">
   <div class="wrap hero__grid">
     <div class="hero__text">
-      <p class="eyebrow">Одинцово · две кофейни</p>
+      <p class="eyebrow">Одинцово · Можайское шоссе, 55</p>
       <h1 class="hero__title" id="heroTitle"><span>Свой буфет</span><span>на <span class="ul">районе<svg viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 6, 120 20, 170 12 S 260 6, 296 14"/></svg></span></span></h1>
-      <p class="hero__lead">Кофе от&nbsp;<b>110&nbsp;₽</b>, выпечка и&nbsp;домашние обеды — их&nbsp;готовит сама хозяйка. Соберите заказ на&nbsp;сайте, и&nbsp;к&nbsp;вашему приходу он&nbsp;будет готов.</p>
+      <p class="hero__lead">Ароматный кофе и&nbsp;свежая, часто <b>авторская выпечка</b> — в&nbsp;деревянном домике у&nbsp;медцентра. Соберите заказ на&nbsp;сайте, и&nbsp;к&nbsp;вашему приходу его приготовят.</p>
       <div class="hero__cta">
         <a class="btn btn--yellow" href="#coffee">Собрать заказ</a>
-        <a class="btn btn--ghost" href="#places">Два адреса</a>
+        <a class="btn btn--ghost" href="#house">Как найти домик</a>
       </div>
       <ul class="status" id="status" aria-live="polite"></ul>
       <div class="now" id="now" hidden>
@@ -669,19 +634,18 @@ dialog{color:inherit}
         <div class="cab__body">
           <div class="cab__inside">
             <div class="shelf">
-              <button class="plate" type="button" data-lb="pies" aria-label="Фото: пирожки"><img src="img/pies-600.webp" alt="" width="350" height="353"></button>
-              <button class="plate" type="button" data-lb="foam" aria-label="Фото: капучино"><img src="img/foam-600.webp" alt="" width="600" height="800"></button>
+              <button class="plate" type="button" data-lb="pies" aria-label="Фото: пирожки в сахарной пудре"><img src="img/pies-600.webp" alt="" width="350" height="353"></button>
+              <button class="plate" type="button" data-lb="shuba" aria-label="Фото: селёдка под шубой"><img src="img/shuba-600.webp" alt="" width="600" height="450"></button>
               <button class="plate" type="button" data-lb="croissants" aria-label="Фото: рогалики с маком"><img src="img/croissants-600.webp" alt="" width="600" height="338"></button>
             </div>
             <div class="shelf">
-              <div class="slate">Сочник<br>с творогом<b>85 ₽</b></div>
-              <button class="plate plate--big" type="button" data-lb="galette" aria-label="Фото: домашний пирог"><img src="img/galette-600.webp" alt="" width="600" height="528"></button>
-              <div class="slate slate--r">«Картошка»<br>в шоколаде<b>75 ₽</b></div>
+              <div class="slate">Выпечка<br>часто<b>авторская</b></div>
+              <div class="plate plate--big"><img src="img/plum-600.webp" alt="Открытый пирог со сливой" width="600" height="450"></div>
+              <div class="slate slate--r">Кофе —<br>лучший<b>в районе</b></div>
             </div>
             <div class="shelf">
-              <div class="books" aria-hidden="true">
-                <i class="book" style="--c:#7d3b2f;--h:84%;--w:14px"></i><i class="book" style="--c:#2f4b5a;--h:96%;--w:12px"></i><i class="book" style="--c:#c9a25a;--h:74%;--w:16px"></i><i class="book" style="--c:#4a5a3a;--h:90%;--w:11px"></i><i class="book" style="--c:#ddd3c0;--h:80%;--w:13px"></i><i class="book book--lean" style="--c:#5a3b5e;--h:86%;--w:12px"></i>
-              </div>
+              <div class="slate">Позвоните —<br>приготовят<b>заранее</b></div>
+              <button class="plate" type="button" data-lb="galette" aria-label="Фото: домашний пирог"><img src="img/galette-600.webp" alt="" width="600" height="528"></button>
               <svg class="teapot" viewBox="0 0 100 84" aria-hidden="true">
                 <ellipse cx="48" cy="80" rx="24" ry="3.2" fill="#000" opacity=".35"/>
                 <path d="M21 40 C6 36 4 58 20 62" fill="none" stroke="#ece5d6" stroke-width="5.5" stroke-linecap="round"/>
@@ -692,14 +656,13 @@ dialog{color:inherit}
                 <ellipse cx="47" cy="34" rx="17" ry="5" fill="#e6dece"/><path d="M30 34 a17 5 0 0 0 34 0" fill="none" stroke="#c9a25a" stroke-width="1.6"/>
                 <circle cx="47" cy="27" r="4.4" fill="#e6dece"/>
               </svg>
-              <div class="slate">Книги<br>на обмен<b>0 ₽</b></div>
             </div>
           </div>
           <button class="door door--l" type="button" aria-label="Открыть или закрыть дверцы буфета"><i class="knob"></i></button>
           <button class="door door--r" type="button" aria-label="Открыть или закрыть дверцы буфета" tabindex="-1"><i class="knob"></i></button>
         </div>
         <div class="cab__drawers">
-          <a class="drawer" href="#case"><span>МЕНЮ</span></a>
+          <a class="drawer" href="#bakes"><span>ВЫПЕЧКА</span></a>
           <button class="drawer" type="button" data-open-tray><span>ПОДНОС</span></button>
         </div>
         <div class="cab__plinth">демо — Д. Стрепенюк</div>
@@ -707,20 +670,19 @@ dialog{color:inherit}
       </div>
 
       <figure class="postcard" aria-label="Отзыв гостя">
-        <p>«Спасибо хозяйке Виктории за&nbsp;её&nbsp;кулинарные труды!!!»</p>
-        <small>Юлия, отзыв на&nbsp;Яндекс Картах</small>
+        <p>«Выпечка — лучше не&nbsp;бывает) …всё тут на&nbsp;пять с&nbsp;плюсом!!!»</p>
+        <small>О.&nbsp;К., отзыв на&nbsp;Яндекс Картах</small>
       </figure>
-
     </div>
   </div>
   <div class="wrap owner-row">
     <aside class="owner-note" data-note>
       <b>Первый экран</b>
-      <p>За три секунды гость понимает: что это, открыто ли сейчас и сколько стоит. Статус считается по вашему графику для каждой точки отдельно. В отзывах жаловались, что сложно застать кафе открытым, — теперь это видно сразу.</p>
+      <p>За три секунды гость понимает: что это, открыто ли сейчас и куда идти. Статус «открыто до 18:00» считается по вашему графику. В одном отзыве жаловались, что сложно застать кафе открытым, — теперь это видно сразу, а позвонить можно в одно касание.</p>
     </aside>
     <aside class="owner-note" data-note>
       <b>Почему «буфет»</b>
-      <p>Буфет — это ещё и шкаф с посудой. У вас в зале он настоящий: полки с чайниками, самоваром и лампочками. Весь сайт собран как такой буфет: полки — меню, ящики — заказ и открытки. Дверцы открываются сами — это первое, что запоминают.</p>
+      <p>Буфет — это ещё и шкаф с посудой. Весь сайт собран как такой буфет: полки — кофе и выпечка, ящики — заказ и открытки. На тарелках — ваша выпечка с фото гостей. Дверцы открываются сами — это первое, что запоминают.</p>
     </aside>
   </div>
 </section>
@@ -730,21 +692,19 @@ dialog{color:inherit}
   <div class="wrap">
     <header class="sec__head rv">
       <p class="shelf-label">Верхняя полка · кофе</p>
-      <h2 class="h2" id="coffeeTitle">Кофе с&nbsp;меловой доски</h2>
-      <p class="sec__lead">Цены как на&nbsp;доске у&nbsp;стойки. Выберите напиток и&nbsp;размер — стакан покажет, что внутри, а&nbsp;итог посчитается сам.</p>
+      <h2 class="h2" id="coffeeTitle">«Лучший кофе в&nbsp;районе»</h2>
+      <p class="sec__lead">Так пишут гости на&nbsp;Яндекс Картах. Выберите напиток — стакан покажет, что внутри, и&nbsp;его можно сразу поставить на&nbsp;поднос.</p>
     </header>
 
     <div class="coffee__grid">
       <div class="frame rv">
         <div class="board">
-          <div class="board__head" aria-hidden="true">
+          <div class="board__head">
             <span class="board__title">Кофе</span>
-            <span class="board__size">S<small>250 мл</small></span>
-            <span class="board__size">M<small>350 мл</small></span>
-            <span class="board__size">L<small>450 мл</small></span>
+            <span class="board__hint">что внутри</span>
           </div>
           <ul class="drinks" id="drinks" role="radiogroup" aria-label="Напиток"></ul>
-          <p class="board__add">Добавь: альтернативное молоко (миндаль, банан, кокос) — <b>50&nbsp;₽</b> · сироп — <b>30&nbsp;₽</b></p>
+          <p class="board__add">Цены и&nbsp;весь выбор — у&nbsp;бариста. Спросить заранее: <a href="tel:+79954064436">+7&nbsp;995&nbsp;406-44-36</a></p>
         </div>
       </div>
 
@@ -758,69 +718,44 @@ dialog{color:inherit}
             <div id="labels"></div>
           </div>
         </div>
-        <div class="sizes" id="sizes" role="radiogroup" aria-label="Размер">
-          <button class="size" type="button" role="radio" data-size="S"><b>S</b><small>250 мл</small></button>
-          <button class="size" type="button" role="radio" data-size="M"><b>M</b><small>350 мл</small></button>
-          <button class="size" type="button" role="radio" data-size="L"><b>L</b><small>450 мл</small></button>
-        </div>
-        <p class="opt-title" id="milkT">Молоко</p>
-        <div class="chips-pick" id="milk" role="radiogroup" aria-labelledby="milkT">
-          <button class="pick" type="button" role="radio" data-milk="">Обычное</button>
-          <button class="pick" type="button" role="radio" data-milk="alm">Миндальное +50</button>
-          <button class="pick" type="button" role="radio" data-milk="ban">Банановое +50</button>
-          <button class="pick" type="button" role="radio" data-milk="coc">Кокосовое +50</button>
-        </div>
         <p class="opt-title">Сироп</p>
         <div class="chips-pick">
-          <button class="pick" type="button" aria-pressed="false" id="syrup">Добавить сироп +30</button>
+          <button class="pick" type="button" aria-pressed="false" id="syrup">Добавить сироп</button>
         </div>
         <div class="brew__sum">
-          <span id="brewName">Капучино, 350 мл</span>
-          <b id="brewPrice">200 ₽</b>
+          <b id="brewName">Капучино</b>
+          <span>цену подскажет<br>бариста</span>
         </div>
         <button class="btn btn--yellow" type="button" id="brewAdd">Поставить на поднос</button>
         <aside class="owner-note owner-note--inline" data-note>
-          <b>Конструктор кофе</b>
-          <p>Цены — с вашей меловой доски. Гость сам видит, что сироп стоит +30&nbsp;₽, а растительное молоко +50&nbsp;₽, и добавляет их без уговоров бариста. Средний чек растёт сам.</p>
+          <b>Кофе</b>
+          <p>Гость видит, из чего напиток, и сразу кладёт его на поднос. Сиропы взяли с фото вашей стойки. Пришлите фото доски с ценами — за вечер добавим всё меню, размеры и цены, и итог будет считаться сам.</p>
         </aside>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======================= ВИТРИНА ======================= -->
-<section class="sec sec--tight" id="case" aria-labelledby="caseTitle">
+<!-- ======================= ВЫПЕЧКА ======================= -->
+<section class="sec sec--tight" id="bakes" aria-labelledby="bakesTitle">
   <div class="wrap">
     <header class="sec__head rv">
-      <p class="shelf-label">Средняя и нижняя полки · витрина</p>
-      <h2 class="h2" id="caseTitle">Всё, что за&nbsp;стеклом</h2>
-      <p class="sec__lead">Выпечку и&nbsp;горячее хозяйка готовит сама, поэтому витрина каждый день немного разная. Нажмите на&nbsp;ценник — позиция ляжет на&nbsp;поднос.</p>
+      <p class="shelf-label">Средняя полка · выпечка</p>
+      <h2 class="h2" id="bakesTitle">«Выпечка — лучше не&nbsp;бывает»</h2>
+      <p class="sec__lead">Свежая и&nbsp;часто авторская — так пишут гости. Ассортимент меняется, поэтому здесь то, что попадало на&nbsp;фото. Нажмите на&nbsp;тарелку — она ляжет на&nbsp;поднос.</p>
     </header>
-
-    <div class="case rv">
-      <div class="case__row">
-        <div class="case__label"><h3>К&nbsp;кофе</h3><p>сладкое и выпечка</p></div>
-        <div class="tags" id="tagsSweet"></div>
-      </div>
-      <div class="case__row">
-        <div class="case__label"><h3>Обед и&nbsp;перекус</h3><p>горячее — любое за&nbsp;330&nbsp;₽</p></div>
-        <div class="tags" id="tagsMeal"></div>
+    <div class="bakes" id="bakesList">
+      <div class="bake bake--ask rv">
+        <h3>Что сегодня?</h3>
+        <p>Спросите, какая выпечка уже готова, — отложат для вас.</p>
+        <a class="btn btn--yellow btn--sm" href="tel:+79954064436"><svg class="ico"><use href="#i-tel"/></svg>Позвонить</a>
+        <a class="btn btn--ghost btn--sm" data-wa="today" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Спросить в WhatsApp</a>
       </div>
     </div>
-    <div class="case__meta">
-      <p>Горячее из&nbsp;витрины — <b>330&nbsp;₽</b>, с&nbsp;чаем — <b>430&nbsp;₽</b>. Цены — с&nbsp;ценников на&nbsp;Новосёловой, осень 2026. Что именно есть сегодня, лучше спросить:</p>
-      <a class="btn btn--ghost btn--sm" data-wa="today" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Что сегодня на&nbsp;витрине?</a>
-    </div>
-    <aside class="owner-note" data-note>
-      <b>Витрина</b>
-      <p>Каждый ценник — кнопка. Поменять цену или убрать позицию — одна строчка, программист не нужен. Кнопка «Что сегодня на витрине?» открывает WhatsApp с готовым вопросом.</p>
+    <aside class="owner-note owner-note--inline" data-note>
+      <b>Выпечка</b>
+      <p>Выпечку хвалят в 4 отзывах из 7 — поэтому она здесь на первом плане. Сейчас на тарелках только то, что гости сфотографировали. Добавим всё, что вы печёте, с ценами и своими фото: каждая карточка — кнопка заказа.</p>
     </aside>
-
-    <div class="case__photos">
-      <figure class="ph ph--43 rv"><img src="img/case-sweets-600.webp" srcset="img/case-sweets-600.webp 600w, img/case-sweets-1200.webp 960w" sizes="(max-width:760px) 50vw, 33vw" alt="Витрина со сладким и ценниками от руки" loading="lazy" width="600" height="450"><span class="ph-wm">демо — Д. Стрепенюк</span><figcaption>Ценники пишут от руки</figcaption></figure>
-      <figure class="ph ph--43 rv"><img src="img/case-hot-600.webp" srcset="img/case-hot-600.webp 600w, img/case-hot-1200.webp 960w" sizes="(max-width:760px) 50vw, 33vw" alt="Горячие блюда в витрине по 330 рублей" loading="lazy" width="600" height="450"><span class="ph-wm">демо — Д. Стрепенюк</span><figcaption>Горячее — по 330 ₽</figcaption></figure>
-      <figure class="ph ph--43 rv"><img src="img/board-600.webp" srcset="img/board-600.webp 600w, img/board-1200.webp 960w" sizes="33vw" alt="Меловая доска с ценами на кофе" loading="lazy" width="600" height="450"><span class="ph-wm">демо — Д. Стрепенюк</span><figcaption>Та самая доска у стойки</figcaption></figure>
-    </div>
   </div>
 </section>
 
@@ -830,20 +765,20 @@ dialog{color:inherit}
     <header class="sec__head rv">
       <p class="shelf-label">Ящик с подносом · предзаказ</p>
       <h2 class="h2" id="preTitle">Заказ ждёт вас готовым</h2>
-      <p class="sec__lead">Удобно, когда спешите: перед приёмом у&nbsp;врача, по&nbsp;дороге на&nbsp;станцию или в&nbsp;обед.</p>
+      <p class="sec__lead">Удобно, когда спешите: перед приёмом в&nbsp;медцентре — домик прямо у&nbsp;входа — или по&nbsp;дороге на&nbsp;работу.</p>
     </header>
     <div class="steps">
-      <div class="step rv"><h3>Соберите поднос</h3><p>Кофе с&nbsp;доски, сочник, горячее — нажимайте на&nbsp;ценники.</p></div>
-      <div class="step rv"><h3>Выберите точку и время</h3><p>Новосёловой или Можайское, через 10&nbsp;минут или ко&nbsp;времени.</p></div>
-      <div class="step rv"><h3>Отправьте в&nbsp;WhatsApp</h3><p>Список с&nbsp;суммой уйдёт сообщением. Оплата на&nbsp;месте.</p></div>
+      <div class="step rv"><h3>Соберите поднос</h3><p>Кофе с&nbsp;доски и&nbsp;выпечка — нажимайте на&nbsp;тарелки.</p></div>
+      <div class="step rv"><h3>Выберите время</h3><p>Через 10&nbsp;минут или ко&nbsp;времени. Сайт подскажет, если домик будет закрыт.</p></div>
+      <div class="step rv"><h3>Позвоните или напишите</h3><p>Список уйдёт сообщением в&nbsp;WhatsApp — или продиктуйте по&nbsp;телефону.</p></div>
     </div>
     <div class="proof rv">
-      <div class="proof__q"><q>Если позвонить, то&nbsp;заранее приготовят, если спешите</q><small>Олег, отзыв о&nbsp;кафе на&nbsp;Можайском на&nbsp;Яндекс Картах</small></div>
+      <div class="proof__q"><q>Если позвонить, то&nbsp;заранее приготовят, если спешите</q><small>Олег, отзыв на&nbsp;Яндекс Картах</small></div>
       <button class="btn btn--yellow" type="button" data-open-tray>Открыть поднос</button>
     </div>
     <aside class="owner-note owner-note--inline" data-note>
       <b>Предзаказ</b>
-      <p>Вы уже готовите заранее по звонку — так пишут в отзывах. Сайт превращает это в кнопку: заказ приходит в WhatsApp готовым списком с суммой и временем. Гость из медцентра пишет до выхода из кабинета — вы готовите к его приходу.</p>
+      <p>Вы уже готовите заранее по звонку — так пишут в отзывах. Сайт делает из этого кнопку: заказ приходит готовым списком со временем. Гость из медцентра заказывает до выхода из кабинета. Если на вашем номере нет WhatsApp, поставим Telegram или оставим только звонок.</p>
     </aside>
   </div>
 </section>
@@ -854,7 +789,7 @@ dialog{color:inherit}
     <div class="rv">
       <p class="shelf-label">Ящик с открытками</p>
       <h2 class="h2" id="iouTitle">«С&nbsp;меня кофе»</h2>
-      <p class="sec__lead">Обещали кому-то кофе? Оформите расписку и&nbsp;отправьте в&nbsp;мессенджер. На&nbsp;открытке адрес и&nbsp;часы работы — долг легко вернуть.</p>
+      <p class="sec__lead">Обещали кому-то кофе? Оформите расписку и&nbsp;отправьте в&nbsp;мессенджер. На&nbsp;открытке адрес домика и&nbsp;часы работы — долг легко вернуть.</p>
       <form class="form" id="iouForm" autocomplete="off" onsubmit="return false">
         <div class="form__row">
           <label class="field"><span>Кто должен</span><input id="iFrom" maxlength="18" placeholder="Маша" value="Маша"></label>
@@ -868,10 +803,6 @@ dialog{color:inherit}
           <span class="lab" id="iWhyT">За что</span>
           <div class="chips-pick" role="radiogroup" aria-labelledby="iWhyT" id="iWhy"></div>
         </div>
-        <div>
-          <span class="lab" id="iWhereT">Где вернуть долг</span>
-          <div class="chips-pick" role="radiogroup" aria-labelledby="iWhereT" id="iWhere"><button class="pick" type="button" role="radio" data-loc="novo" aria-checked="true">Новосёловой, 18</button><button class="pick" type="button" role="radio" data-loc="mozh" aria-checked="false">Можайское, 55</button></div>
-        </div>
         <div class="form__btns">
           <button class="btn btn--yellow" type="button" id="iShare">Отправить другу</button>
           <button class="btn btn--ghost" type="button" id="iSave">Скачать PNG</button>
@@ -883,71 +814,57 @@ dialog{color:inherit}
       <canvas id="iouCanvas" width="1080" height="1350" role="img" aria-label="Расписка «С меня кофе»"></canvas>
       <aside class="owner-note" data-note>
         <b>Расписки «С меня кофе»</b>
-        <p>Каждая открытка — приглашение к вам с адресом и часами работы. Люди сами рассылают её друзьям, а друг приходит с конкретным заказом. Бесплатная реклама, которая работает без бюджета.</p>
+        <p>Каждая открытка — приглашение к вам с адресом и часами работы. Люди сами рассылают её друзьям, а друг приходит с конкретным заказом. Бесплатная реклама без бюджета.</p>
       </aside>
     </div>
   </div>
 </section>
 
-<!-- ======================= АДРЕСА ======================= -->
-<section class="sec sec--tight" id="places" aria-labelledby="placesTitle">
+<!-- ======================= ДОМИК ======================= -->
+<section class="sec sec--tight" id="house" aria-labelledby="houseTitle">
   <div class="wrap">
     <header class="sec__head rv">
-      <p class="shelf-label">Две дверцы · адреса</p>
-      <h2 class="h2" id="placesTitle">Два буфета в&nbsp;Одинцово</h2>
-      <p class="sec__lead">Между ними меньше километра. Работают каждый день, в&nbsp;праздники часы могут меняться — лучше позвонить.</p>
+      <p class="shelf-label">Дверца · как найти</p>
+      <h2 class="h2" id="houseTitle">Домик у&nbsp;медцентра</h2>
+      <p class="sec__lead">Деревянный, с&nbsp;круглой крышей и&nbsp;полукруглыми окошками — летом и&nbsp;зимой его ни&nbsp;с&nbsp;чем не&nbsp;спутать.</p>
     </header>
-    <div class="places">
-      <article class="place rv" data-place="novo">
-        <button class="place__ph" type="button" data-lb="front-novo"><img src="img/front-novo-600.webp" srcset="img/front-novo-600.webp 600w, img/front-novo-1200.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Вход в the Buffet на бульваре Любы Новосёловой под красно-белой маркизой" loading="lazy" width="600" height="450"><span class="ph-wm">демо — Д. Стрепенюк</span></button>
-        <span class="place__nick">Под полосатой маркизой</span>
-        <div class="place__body">
-          <h3 class="place__addr">Бул. Любы Новосёловой,&nbsp;18</h3>
-          <p class="place__st" data-st="novo"></p>
-          <p class="place__txt">Первый этаж жилого дома, рядом с&nbsp;цветочным. Внутри меловые стены, книжные ниши с&nbsp;буккроссингом и&nbsp;витрина. У&nbsp;входа стоит столик.</p>
-          <dl class="place__facts">
-            <dt>Часы</dt><dd>ежедневно 9:00–20:00</dd>
-            <dt>Телефон</dt><dd><a href="tel:+79775734930">+7&nbsp;(977)&nbsp;573-49-30</a> · WhatsApp</dd>
-            <dt>Рейтинг</dt><dd>4,3&nbsp;★ на&nbsp;Яндекс Картах · 75&nbsp;оценок</dd>
-          </dl>
-          <div class="chips"><span class="chip">Буккроссинг</span><span class="chip">Растительное молоко</span><span class="chip">Столик на улице</span><span class="chip">Вход для колясок</span><span class="chip">Карта · наличные · QR</span></div>
-          <div class="place__btns">
-            <a class="btn btn--yellow btn--sm" href="https://yandex.ru/maps/?rtext=~55.676189%2C37.259298" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Маршрут</a>
-            <a class="btn btn--ghost btn--sm" href="tel:+79775734930"><svg class="ico"><use href="#i-tel"/></svg>Позвонить</a>
-            <a class="btn btn--ghost btn--sm" data-wa="hello-novo" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</a>
-          </div>
+    <div class="house">
+      <div class="house__ph rv">
+        <button type="button" id="housePh" aria-label="Открыть фото домика"><img id="houseImg" src="img/house-mozh-600.webp" srcset="img/house-mozh-600.webp 600w, img/house-mozh-1200.webp 960w" sizes="(max-width:980px) 100vw, 55vw" alt="Деревянный домик the Buffet с круглой крышей летом" loading="lazy" width="600" height="450"></button>
+        <div class="season" role="radiogroup" aria-label="Время года">
+          <button class="pick" type="button" role="radio" aria-checked="true" data-season="summer">Летом</button>
+          <button class="pick" type="button" role="radio" aria-checked="false" data-season="winter">Зимой</button>
         </div>
-      </article>
-      <article class="place rv" data-place="mozh">
-        <button class="place__ph" type="button" data-lb="house-mozh"><img src="img/house-mozh-600.webp" srcset="img/house-mozh-600.webp 600w, img/house-mozh-1200.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Деревянный домик the Buffet с полукруглой крышей на Можайском шоссе" loading="lazy" width="600" height="450"><span class="ph-wm">демо — Д. Стрепенюк</span></button>
-        <span class="place__nick">Домик у медцентра</span>
-        <div class="place__body">
-          <h3 class="place__addr">Можайское шоссе,&nbsp;55</h3>
-          <p class="place__st" data-st="mozh"></p>
-          <p class="place__txt">Деревянный домик с&nbsp;круглой крышей прямо у&nbsp;медцентра. Удобно взять кофе до&nbsp;приёма или после. Гости хвалят выпечку, музыку и&nbsp;тишину.</p>
-          <dl class="place__facts">
-            <dt>Часы</dt><dd>ежедневно 10:00–18:00</dd>
-            <dt>Телефон</dt><dd><a href="tel:+79954064436">+7&nbsp;(995)&nbsp;406-44-36</a></dd>
-            <dt>Рейтинг</dt><dd>4,1&nbsp;★ на&nbsp;Яндекс Картах · 31&nbsp;оценка</dd>
-          </dl>
-          <div class="chips"><span class="chip">Приготовят заранее</span><span class="chip">Доставка еды</span><span class="chip">Авторская выпечка</span><span class="chip">Рядом с медцентром</span></div>
-          <div class="place__btns">
-            <a class="btn btn--yellow btn--sm" href="https://yandex.ru/maps/?rtext=~55.672860%2C37.270790" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Маршрут</a>
-            <a class="btn btn--ghost btn--sm" href="tel:+79954064436"><svg class="ico"><use href="#i-tel"/></svg>Позвонить</a>
-            <a class="btn btn--ghost btn--sm" data-wa="hello-mozh" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</a>
-          </div>
+        <span class="ph-wm">демо — Д. Стрепенюк</span>
+      </div>
+      <div class="house__info rv">
+        <h3 class="place__addr">Можайское шоссе,&nbsp;55</h3>
+        <p class="place__st" id="houseSt"></p>
+        <p class="place__txt">Домик стоит прямо у&nbsp;медцентра: удобно взять кофе до&nbsp;приёма или после. Внутри чисто, уютно и&nbsp;играет хорошая музыка — так пишут гости.</p>
+        <dl class="place__facts">
+          <dt>Часы</dt><dd>ежедневно 10:00–18:00</dd>
+          <dt>Телефон</dt><dd><a href="tel:+79954064436">+7&nbsp;(995)&nbsp;406-44-36</a></dd>
+          <dt>Рядом</dt><dd>остановка «Комбинат Стройиндустрия», 250&nbsp;м</dd>
+          <dt>Рейтинг</dt><dd>4,1&nbsp;★ на&nbsp;Яндекс Картах · 31&nbsp;оценка</dd>
+        </dl>
+        <div class="chips"><span class="chip">Приготовят заранее</span><span class="chip">Доставка еды</span><span class="chip">Авторская выпечка</span><span class="chip">Сиропы к кофе</span></div>
+        <div class="place__btns">
+          <a class="btn btn--yellow btn--sm" href="https://yandex.ru/maps/?rtext=~55.672860%2C37.270790" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Маршрут</a>
+          <a class="btn btn--ghost btn--sm" href="tel:+79954064436"><svg class="ico"><use href="#i-tel"/></svg>Позвонить</a>
+          <a class="btn btn--ghost btn--sm" data-wa="hello" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</a>
         </div>
-      </article>
+        <p class="place__txt" style="font-size:14px;color:var(--chalk-3)">В праздники часы могут меняться — лучше позвонить.</p>
+      </div>
     </div>
     <div class="map rv" id="map">
       <div>
-        <p>Обе точки на&nbsp;одной карте. Загрузим её, только когда попросите.</p>
-        <button class="btn btn--paper" type="button" id="mapBtn"><svg class="ico"><use href="#i-pin"/></svg>Показать карту</button>
+        <p>Карта загрузится, только когда попросите.</p>
+        <button class="btn btn--paper" type="button" id="mapBtn"><svg class="ico"><use href="#i-pin"/></svg>Показать на карте</button>
       </div>
     </div>
     <aside class="owner-note owner-note--inline" data-note>
-      <b>Два адреса</b>
-      <p>Сейчас у кафе нет сайта, а в 2ГИС отмечена только одна точка из двух. Здесь обе: живой статус, маршрут, звонок и WhatsApp в одно касание. Карта грузится по клику, поэтому страница открывается быстро даже на слабом интернете.</p>
+      <b>Как найти</b>
+      <p>Сейчас у кафе нет сайта, а в 2ГИС домик на Можайском мы не нашли — только на Яндекс Картах. Здесь всё в одном месте: живой статус, маршрут, звонок и WhatsApp в одно касание. Карта грузится по клику, поэтому страница открывается быстро даже на слабом интернете.</p>
     </aside>
   </div>
 </section>
@@ -964,34 +881,26 @@ dialog{color:inherit}
       <div class="glasspane rv">
         <div class="glasspane__in">
           <div class="cards">
-            <blockquote class="pc" style="--r:-1.6deg;--t:-4deg"><q>Лучший кофе в&nbsp;районе однозначно. Выпечка всегда!!! Свежайшая, часто авторская.</q><footer>Олег · Можайское, 55</footer></blockquote>
-            <blockquote class="pc" style="--r:1.2deg;--t:3deg"><q>А&nbsp;уж&nbsp;какие здесь домашние обеды… И&nbsp;отдельная любовь — это запеканка!</q><footer>Юлия · Новосёловой, 18</footer></blockquote>
-            <blockquote class="pc" style="--r:.8deg;--t:-2deg"><q>Обстановка как дома: тепло, уютно, печка, книги, вкусное какао…</q><footer>Полина · Новосёловой, 18</footer></blockquote>
-            <blockquote class="pc" style="--r:-1deg;--t:4deg"><q>Сэндвич с&nbsp;курицей и&nbsp;яйцом — это вообще улёт и&nbsp;любовь.</q><footer>Ирина · Новосёловой, 18</footer></blockquote>
-            <blockquote class="pc" style="--r:1.6deg;--t:-3deg"><q>Вкусняцкий кофе всегдаааа, поэтому приезжаю сюда специально с&nbsp;ребёнком с&nbsp;другого района!</q><footer>Виктор · Новосёловой, 18</footer></blockquote>
-            <blockquote class="pc" style="--r:-.8deg;--t:2deg"><q>Очень вкусный и&nbsp;ароматный кофе!) Выпечка — лучше не&nbsp;бывает) …всё тут на&nbsp;пять с&nbsp;плюсом!!!</q><footer>О.&nbsp;К. · Можайское, 55</footer></blockquote>
-            <blockquote class="pc" style="--r:1deg;--t:-4deg"><q>Еда и&nbsp;выпечка… домашняя, так как её&nbsp;готовит непосредственно владелец кофейни.</q><footer>Иван · Новосёловой, 18</footer></blockquote>
-            <blockquote class="pc" style="--r:-1.4deg;--t:3deg"><q>Любимое кафе, традиция каждое утро покупать там вкусный кофе.</q><footer>Наталья · Новосёловой, 18</footer></blockquote>
+            <blockquote class="pc" style="--r:-1.6deg;--t:-4deg"><q>Лучший кофе в&nbsp;районе однозначно. Выпечка всегда!!! Свежайшая, часто авторская. Ооочень приятное место.</q><footer>Олег · январь 2024</footer></blockquote>
+            <blockquote class="pc" style="--r:1.2deg;--t:3deg"><q>Очень вкусный и&nbsp;ароматный кофе!) Выпечка — лучше не&nbsp;бывает) …и&nbsp;чисто, и&nbsp;музыка, и&nbsp;уют… всё тут на&nbsp;пять с&nbsp;плюсом!!!</q><footer>О.&nbsp;К. · май 2025</footer></blockquote>
+            <blockquote class="pc" style="--r:.8deg;--t:-2deg"><q>Комфорт, уют, суперская музыка. Наивкуснейшая выпечка, отличный кофе и&nbsp;обаятельный владелец кафе задают настроение на&nbsp;весь день!</q><footer>Клара · июль 2022</footer></blockquote>
+            <blockquote class="pc" style="--r:-1deg;--t:4deg"><q>Классно, тихо, спокойно.</q><footer>Digi Rok · январь 2023</footer></blockquote>
           </div>
         </div>
       </div>
       <div class="score rv" id="score">
-        <div class="score__big"><b>4,3</b><span>Новосёловой, 18<br>75 оценок</span></div>
-        <div class="score__big" style="margin-top:14px"><b>4,1</b><span>Можайское, 55<br>31 оценка</span></div>
-        <p class="score__sub">Яндекс Карты, октябрь 2026. Доля положительных отзывов по&nbsp;темам, Новосёловой:</p>
+        <div class="score__big"><b>4,1</b><span>Яндекс Карты<br>31 оценка · 7 отзывов</span></div>
+        <p class="score__sub">Что хвалят — сколько отзывов из&nbsp;7 об&nbsp;этом пишут:</p>
         <ul class="bars">
-          <li>Кухня<span class="bar"><i style="--v:95%"></i></span><em>95%</em></li>
-          <li>Персонал<span class="bar"><i style="--v:93%"></i></span><em>93%</em></li>
-          <li>Еда<span class="bar"><i style="--v:92%"></i></span><em>92%</em></li>
-          <li>Выпечка<span class="bar"><i style="--v:91%"></i></span><em>91%</em></li>
-          <li>Атмосфера<span class="bar"><i style="--v:90%"></i></span><em>90%</em></li>
-          <li>Напитки<span class="bar"><i style="--v:88%"></i></span><em>88%</em></li>
-          <li>Кофе<span class="bar"><i style="--v:86%"></i></span><em>86%</em></li>
+          <li>Выпечку<span class="bar"><i style="--v:57%"></i></span><em>4 из 7</em></li>
+          <li>Кофе<span class="bar"><i style="--v:43%"></i></span><em>3 из 7</em></li>
+          <li>Уют<span class="bar"><i style="--v:29%"></i></span><em>2 из 7</em></li>
+          <li>Музыку<span class="bar"><i style="--v:29%"></i></span><em>2 из 7</em></li>
         </ul>
-        <a class="btn btn--ghost" href="https://yandex.ru/maps/org/the_buffet/107993833577/reviews/" target="_blank" rel="noopener">Все отзывы на Яндексе</a>
+        <a class="btn btn--ghost" href="https://yandex.ru/maps/org/the_buffet/108141345358/reviews/" target="_blank" rel="noopener">Все отзывы на Яндексе</a>
         <aside class="owner-note owner-note--inline" data-note>
           <b>Отзывы</b>
-          <p>Лучшие отзывы с Яндекс Карт, с именами, — живое доказательство вместо рекламных обещаний. Цифры по темам тоже оттуда: кухню хвалят в 95% отзывов.</p>
+          <p>Лучшие отзывы с Яндекс Карт, с именами, — живое доказательство вместо рекламных обещаний. Сайт может мягко звать гостей оставить отзыв после заказа: 7 отзывов — мало, а у соседей их сотни.</p>
         </aside>
       </div>
     </div>
@@ -1003,8 +912,8 @@ dialog{color:inherit}
   <div class="wrap">
     <header class="sec__head rv">
       <p class="shelf-label">Фотоальбом из нижнего ящика</p>
-      <h2 class="h2" id="photosTitle">Как это выглядит</h2>
-      <p class="sec__lead">Фото гостей и&nbsp;кафе с&nbsp;Яндекс Карт. Нажмите, чтобы рассмотреть.</p>
+      <h2 class="h2" id="photosTitle">Домик в&nbsp;любое время года</h2>
+      <p class="sec__lead">Фото гостей с&nbsp;Яндекс Карт. Нажмите, чтобы рассмотреть.</p>
     </header>
     <div class="gal rv" id="gal"></div>
   </div>
@@ -1016,25 +925,21 @@ dialog{color:inherit}
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <a class="logo" href="#top" aria-label="the Buffet — наверх"><span class="logo__badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 8.5h11l-1.5 12h-8z"/><path d="M5 6h14v2.5H5z"/><path d="M8 3.5h8l1 2.5H7z"/></svg><i>КОФЕ</i></span><span class="logo__word"><small>the</small>Buffet</span></a>
-        <p style="margin-top:14px">Две кофейни в&nbsp;Одинцово: кофе, выпечка и&nbsp;домашние обеды.</p>
-      </div>
-      <div>
-        <h3>Новосёловой, 18</h3>
-        <ul><li>бульвар Любы Новосёловой, 18</li><li>ежедневно 9:00–20:00</li><li><a href="tel:+79775734930">+7 (977) 573-49-30</a></li></ul>
+        <a class="logo" href="#top" aria-label="the Buffet — наверх"><span class="logo__badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 11h12v3.5a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M17 12.5h1.5a2 2 0 0 1 0 4H16.6"/><path d="M8.5 4.5c-.8 1 .8 1.8 0 3M12 4c-.8 1 .8 1.8 0 3"/><path d="M4 21h15"/></svg></span><span class="logo__word"><small>the</small>Buffet</span></a>
+        <p style="margin-top:14px">Кофе и&nbsp;выпечка в&nbsp;деревянном домике у&nbsp;медцентра.</p>
       </div>
       <div>
         <h3>Можайское, 55</h3>
-        <ul><li>Можайское шоссе, 55</li><li>ежедневно 10:00–18:00</li><li><a href="tel:+79954064436">+7 (995) 406-44-36</a></li></ul>
+        <ul><li>Одинцово, Можайское шоссе, 55</li><li>ежедневно 10:00–18:00</li><li><a href="tel:+79954064436">+7 (995) 406-44-36</a></li></ul>
       </div>
       <div class="demo-card">
         <p><b>Это демо-версия</b> нового сайта the&nbsp;Buffet. Её сделал Денис Стрепенюк — <a href="tel:+79773938033">+7&nbsp;977&nbsp;393-80-33</a>.</p>
-        <p>Тексты, цены, отзывы и фото взяты с&nbsp;Яндекс Карт и&nbsp;2ГИС в&nbsp;октябре 2026. Хотите такой сайт — позвоните, расскажу, как запустить его на&nbsp;своём домене.</p>
+        <p>Отзывы и фото взяты с&nbsp;Яндекс Карт в&nbsp;октябре 2026. Хотите такой сайт — позвоните, расскажу, как запустить его на&nbsp;своём домене.</p>
       </div>
     </div>
     <aside class="owner-note owner-note--inline" data-note>
       <b>Что входит в запуск</b>
-      <p>Свой домен вместо демо-ссылки, меню и цены, которые вы правите с телефона, Яндекс Метрика (видно, сколько людей открыли сайт и нажали «WhatsApp»), ссылка на сайт в карточках Яндекс Карт и 2ГИС. И свои фото вместо фото гостей.</p>
+      <p>Свой домен вместо демо-ссылки, ваше меню с ценами, которое вы правите с телефона, свои фото вместо фото гостей, Яндекс Метрика (видно, сколько людей открыли сайт и нажали «Позвонить») и ссылка на сайт в карточке на Яндекс Картах.</p>
     </aside>
     <div class="foot__bottom">
       <span>© the Buffet · демо-версия сайта · разработка Денис Стрепенюк, +7 977 393-80-33</span>
@@ -1046,7 +951,7 @@ dialog{color:inherit}
 <!-- ======================= ПОДНОС ======================= -->
 <button class="tray-fab" id="trayFab" type="button" data-open-tray aria-label="Открыть поднос">
   <svg aria-hidden="true"><use href="#i-tray"/></svg>
-  <span>Поднос</span><span class="tray-fab__n" id="fabN">0</span><b id="fabSum">0 ₽</b>
+  <span>Поднос</span><span class="tray-fab__n" id="fabN">0</span>
 </button>
 
 <dialog class="tray" id="tray" aria-labelledby="trayTitle">
@@ -1059,17 +964,14 @@ dialog{color:inherit}
         <p>Пока пусто. Положите что-нибудь с&nbsp;полок или возьмите готовое:</p>
         <div class="quick" id="quick"></div>
       </div>
-      <div class="total"><span>Итого</span><b id="total">0 ₽</b></div>
+      <div class="total"><span>Позиций</span><b id="total">0</b></div>
+      <p class="total__note">Сумму назовут при подтверждении. Оплата на&nbsp;месте.</p>
       <div class="stamp" aria-hidden="true">ДЕМО-ВЕРСИЯ<br>Д. СТРЕПЕНЮК</div>
     </div>
 
-    <h3>Где заберёте</h3>
-    <div class="locs" id="locs">
-      <label class="loc"><input type="radio" name="loc" value="novo" checked><i></i><b>Новосёловой, 18</b><small data-st-short="novo"></small></label>
-      <label class="loc"><input type="radio" name="loc" value="mozh"><i></i><b>Можайское шоссе, 55</b><small data-st-short="mozh"></small></label>
-    </div>
+    <div class="tray__where"><svg class="ico"><use href="#i-pin"/></svg><div><b>Можайское шоссе, 55</b><small id="trayStatus"></small></div></div>
 
-    <h3>Когда</h3>
+    <h3>Когда заберёте</h3>
     <div class="when" id="when" role="radiogroup" aria-label="Когда заберёте">
       <button class="pick" type="button" role="radio" data-when="10">через 10 мин</button>
       <button class="pick" type="button" role="radio" data-when="20">через 20 мин</button>
@@ -1080,29 +982,24 @@ dialog{color:inherit}
     <p class="tray__eta" id="eta"></p>
     <p class="warn" id="warn" hidden></p>
 
-    <h3>Как к вам обращаться</h3>
-    <label class="field"><span class="sr">Имя</span><input id="who" maxlength="30" placeholder="Имя, необязательно" autocomplete="given-name"></label>
+    <h3>Имя и пожелания</h3>
+    <div class="fields">
+      <label class="field"><span class="sr">Имя</span><input id="who" maxlength="30" placeholder="Имя, необязательно" autocomplete="given-name"></label>
+      <label class="field"><span class="sr">Пожелания</span><input id="wish" maxlength="80" placeholder="Например: без сахара, побольше пены"></label>
+    </div>
 
     <div class="tray__btns">
       <a class="btn btn--yellow" id="sendWa" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Отправить в WhatsApp</a>
-      <a class="btn btn--ghost" id="sendTel" href="tel:+79775734930"><svg class="ico"><use href="#i-tel"/></svg>Позвонить и продиктовать</a>
+      <a class="btn btn--ghost" id="sendTel" href="tel:+79954064436"><svg class="ico"><use href="#i-tel"/></svg>Позвонить и продиктовать</a>
     </div>
-    <p class="tray__note">Оплата на&nbsp;месте при получении. Если чего-то не&nbsp;окажется на&nbsp;витрине, вам ответят и&nbsp;предложат замену.</p>
-  </div>
-</dialog>
-
-<dialog class="pickd" id="pickd" aria-labelledby="pickT">
-  <div class="pickd__in">
-    <h2 id="pickT">Куда?</h2>
-    <button class="x" type="button" id="pickClose" aria-label="Закрыть">×</button>
-    <div class="pickd__list" id="pickList"></div>
+    <p class="tray__note">Если чего-то не&nbsp;окажется на&nbsp;витрине, вам перезвонят и&nbsp;предложат замену.</p>
   </div>
 </dialog>
 
 <nav class="mbar" aria-label="Быстрые действия">
-  <button class="mbar__tray" type="button" data-open-tray><svg class="ico" viewBox="0 0 48 30" style="width:30px"><use href="#i-tray"/></svg><span id="mN">Поднос</span><b id="mSum"></b></button>
-  <button type="button" data-pick="wa"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</button>
-  <button type="button" data-pick="tel"><svg class="ico"><use href="#i-tel"/></svg>Позвонить</button>
+  <button class="mbar__tray" type="button" data-open-tray><svg class="ico" viewBox="0 0 48 30" style="width:30px"><use href="#i-tray"/></svg><span id="mN">Поднос</span></button>
+  <a data-wa="hello" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</a>
+  <a href="tel:+79954064436"><svg class="ico"><use href="#i-tel"/></svg>Позвонить</a>
 </nav>
 
 <a class="badge" href="tel:+79773938033" aria-label="Демо-версия. Разработчик Денис Стрепенюк, позвонить">
@@ -1117,7 +1014,7 @@ dialog{color:inherit}
 </a>
 
 <div class="ownernav" id="ownerNav" hidden>
-  <span>Заметки <b id="onCount">1 из 8</b></span>
+  <span>Заметки <b id="onCount">1 из 9</b></span>
   <button type="button" id="onPrev" aria-label="Предыдущая заметка">‹</button>
   <button type="button" id="onNext" aria-label="Следующая заметка">›</button>
 </div>
@@ -1148,72 +1045,38 @@ dialog{color:inherit}
   console.log('%cthe Buffet — демо-версия сайта', 'font:400 18px Pacifico,cursive;color:#f0cf62');
   console.log('Дизайн и разработка: Денис Стрепенюк, +7 977 393-80-33');
 
-  /* ---------- данные: всё с Яндекс Карт, 2ГИС и фото витрины (октябрь 2026) ---------- */
-  var LOC = {
-    novo: { id: 'novo', short: 'Новосёловой, 18', full: 'бул. Любы Новосёловой, 18', phone: '+7 (977) 573-49-30', tel: '+79775734930', wa: '79775734930', open: 9 * 60, close: 20 * 60, hours: '9:00–20:00', where: 'на Новосёловой' },
-    mozh: { id: 'mozh', short: 'Можайское, 55', full: 'Можайское шоссе, 55', phone: '+7 (995) 406-44-36', tel: '+79954064436', wa: '79954064436', open: 10 * 60, close: 18 * 60, hours: '10:00–18:00', where: 'на Можайском' }
-  };
-  var SIZES = { S: { ml: 250, h: 160 }, M: { ml: 350, h: 200 }, L: { ml: 450, h: 240 } };
-  var COFFEE = [
-    { id: 'esp', name: 'Эспрессо', p: { one: 110 }, milk: false, h: 110 },
-    { id: 'ame', name: 'Американо', p: { S: 150, M: 160 }, milk: false },
-    { id: 'cap', name: 'Капучино', p: { S: 170, M: 200, L: 220 }, milk: true },
-    { id: 'lat', name: 'Латте', p: { S: 170, M: 200, L: 220 }, milk: true },
-    { id: 'flat', name: 'Флэт уайт', p: { S: 180 }, milk: true },
-    { id: 'raf', name: 'Раф', p: { M: 250, L: 280 }, milk: true },
-    { id: 'coc', name: 'Какао', p: { S: 160, M: 200, L: 220 }, milk: true },
-    { id: 'cho', name: 'Горячий шоколад', p: { S: 160, M: 200, L: 220 }, milk: true },
-    { id: 'tea', name: 'Чай', p: { one: 100 }, milk: false, h: 200 }
+  /* ---------- данные: всё с Яндекс Карт (октябрь 2026) ---------- */
+  var LOC = { full: 'Можайское шоссе, 55', phone: '+7 (995) 406-44-36', tel: '+79954064436', wa: '79954064436', open: 10 * 60, close: 18 * 60, hours: '10:00–18:00' };
+  var DRINKS = [
+    { id: 'esp', name: 'Эспрессо', about: 'крепкий, с крема', h: 110 },
+    { id: 'ame', name: 'Американо', about: 'эспрессо и горячая вода', h: 220 },
+    { id: 'cap', name: 'Капучино', about: 'эспрессо, молоко и шапка пены', h: 220 },
+    { id: 'lat', name: 'Латте', about: 'много молока и чуть пены', h: 220 }
   ];
-  var MILK = {
-    alm: { adj: 'миндальном', label: 'миндальное', c: '#e4cba6' },
-    ban: { adj: 'банановом', label: 'банановое', c: '#ecd99a' },
-    coc: { adj: 'кокосовом', label: 'кокосовое', c: '#f6f3ec' }
-  };
-  var MENU = [
-    { id: 'ring', cat: 'sweet', name: 'Кольцо песочное с арахисом', price: 55 },
-    { id: 'kart', cat: 'sweet', name: 'Пирожное «Картошка» в шоколаде', price: 75 },
-    { id: 'soch', cat: 'sweet', name: 'Сочник с творогом', price: 85 },
-    { id: 'trub', cat: 'sweet', name: 'Трубочка со сгущёнкой', price: 85 },
-    { id: 'pops', cat: 'sweet', name: 'Кейк-попс', price: 85 },
-    { id: 'ekl', cat: 'sweet', name: 'Эклер со сгущёнкой', price: 95 },
-    { id: 'palch', cat: 'sweet', name: 'Пальчики с вишней', price: 100 },
-    { id: 'oreh', cat: 'sweet', name: 'Орешки со сгущёнкой, 5 шт.', price: 100 },
-    { id: 'kolb', cat: 'sweet', name: 'Шоколадная колбаска', price: 120 },
-    { id: 'brow', cat: 'sweet', name: 'Брауни с грецким орехом', price: 130 },
-    { id: 'orehm', cat: 'sweet', name: 'Орешки мини', price: 130 },
-    { id: 'sos', cat: 'meal', name: 'Сосиска в тесте', price: 120 },
-    { id: 'kap', cat: 'meal', name: 'Салат из маринованной капусты с перцем', price: 150 },
-    { id: 'zap', cat: 'meal', name: 'Запеканка творожная', price: 200 },
-    { id: 'sand', cat: 'meal', name: 'Сэндвич: курица, яйцо, цезарь, айсберг', price: 230 },
-    { id: 'caes', cat: 'meal', name: 'Цезарь с курицей', price: 330, hot: true },
-    { id: 'kiev', cat: 'meal', name: 'Котлета по-киевски с гарниром', price: 330, hot: true },
-    { id: 'liver', cat: 'meal', name: 'Печень телячья в сливочном соусе', price: 330, hot: true },
-    { id: 'cabb', cat: 'meal', name: 'Капуста тушёная с сосисками', price: 330, hot: true },
-    { id: 'plov', cat: 'meal', name: 'Плов со свининой', price: 330, hot: true },
-    { id: 'pep', cat: 'meal', name: 'Перец фаршированный', price: 330, hot: true }
+  /* только то, что есть на фото гостей именно этого кафе */
+  var BAKES = [
+    { id: 'pies', name: 'Пирожки', about: 'в сахарной пудре', img: 'pies', w: 350 },
+    { id: 'rog', name: 'Рогалики с маком', about: 'румяные, с маком', img: 'croissants', w: 600 },
+    { id: 'plum', name: 'Пирог со сливой', about: 'открытый, домашний', img: 'plum', w: 600 },
+    { id: 'pie', name: 'Домашний пирог', about: 'присыпан сахарной пудрой', img: 'galette', w: 600 },
+    { id: 'shuba', name: 'Селёдка под шубой', about: 'классика, в форме', img: 'shuba', w: 600 }
   ];
   var PHOTOS = [
-    { f: 'front-novo', w: 960, cap: 'Новосёловой, 18: вход под полосатой маркизой', cls: 'w2 h2r' },
-    { f: 'interior', w: 960, cap: 'Меловые стены, книжные ниши и люстра', cls: 'h2r' },
-    { f: 'shelves', w: 1200, cap: 'Тот самый буфет: чайники, самовар и лампочки', cls: '' },
+    { f: 'house-mozh', w: 960, cap: 'Домик с круглой крышей, лето', cls: 'w2 h2r' },
+    { f: 'front-mozh', w: 960, cap: 'Вход и кадка с логотипом the Buffet', cls: 'w2' },
     { f: 'croissants', w: 1200, cap: 'Рогалики с маком и пирожки на кружевной салфетке', cls: '' },
-    { f: 'house-mozh', w: 960, cap: 'Можайское, 55: домик с круглой крышей', cls: 'w2' },
-    { f: 'foam', w: 960, cap: 'Капучино с пеной-облаком', cls: 'h2r' },
-    { f: 'winter-mozh', w: 1200, cap: 'Зимой домик украшают гирляндой', cls: 'w2' },
-    { f: 'galette', w: 1087, cap: 'Домашний пирог', cls: '' },
-    { f: 'shuba', w: 1200, cap: 'Селёдка под шубой', cls: '' },
-    { f: 'cup', w: 720, cap: 'Кофе с собой в чёрном стакане', cls: 'h2r' },
-    { f: 'case-sweets', w: 960, cap: 'Витрина со сладким: ценники от руки', cls: '' },
-    { f: 'door-novo', w: 960, cap: 'Вход на Новосёловой и столик на улице', cls: 'h2r' },
-    { f: 'pies', w: 350, cap: 'Пирожки, присыпанные пудрой', cls: '' },
-    { f: 'clinic-mozh', w: 960, cap: 'Домик стоит прямо у медцентра', cls: '' },
-    { f: 'case-hot', w: 960, cap: 'Горячее в витрине — по 330 ₽', cls: '' }
+    { f: 'pies', w: 350, cap: 'Пирожки в сахарной пудре', cls: '' },
+    { f: 'winter-mozh', w: 1200, cap: 'Зимой вход украшают гирляндой', cls: 'w2' },
+    { f: 'galette', w: 1087, cap: 'Домашний пирог', cls: 'h2r' },
+    { f: 'shuba', w: 1200, cap: 'Селёдка под шубой', cls: 'h2r' },
+    { f: 'clinic-mozh', w: 960, cap: 'Домик стоит прямо у медцентра', cls: 'w2' },
+    { f: 'autumn-mozh', w: 960, cap: 'Медцентр и домик осенью', cls: 'w2' },
+    { f: 'roof-mozh', w: 1200, cap: 'Круглые окошки под снегом', cls: 'w2' },
+    { f: 'winter-wide', w: 1200, cap: 'Домик и медцентр зимой', cls: 'w2' },
+    { f: 'snow-mozh', w: 1200, cap: 'Вход зимой', cls: 'w2' }
   ];
 
   /* ---------- общие помощники ---------- */
-  var fmt = function(n){ return Math.round(n).toLocaleString('ru-RU'); };
-  var rub = function(n){ return fmt(n) + ' ₽'; };
   var pad = function(n){ return (n < 10 ? '0' : '') + n; };
   var plural = function(n, one, few, many){
     var m10 = n % 10, m100 = n % 100;
@@ -1227,7 +1090,7 @@ dialog{color:inherit}
     get: function(k){ try { return window.localStorage.getItem(k); } catch (e) { return null; } },
     set: function(k, v){ try { window.localStorage.setItem(k, v); } catch (e) {} }
   };
-  var waLink = function(num, text){ return 'https://wa.me/' + num + '?text=' + encodeURIComponent(text); };
+  var waLink = function(text){ return 'https://wa.me/' + LOC.wa + '?text=' + encodeURIComponent(text); };
   var toastEl = $('#toast'), toastTimer;
   function toast(msg){
     toastEl.textContent = msg;
@@ -1237,19 +1100,18 @@ dialog{color:inherit}
   }
   function openDialog(d){ if (!d) return; if (typeof d.showModal === 'function') { if (!d.open) d.showModal(); } else d.setAttribute('open', ''); }
   function closeDialog(d){ if (!d) return; if (typeof d.close === 'function') d.close(); else d.removeAttribute('open'); }
-  function closeOnBackdrop(d){ d.addEventListener('click', function(e){ if (e.target === d) closeDialog(d); }); }
 
   /* московское время: часы работы считаем по Москве, где бы ни был гость */
   function msk(){ var d = new Date(); return new Date(d.getTime() + (d.getTimezoneOffset() + 180) * 60000); }
   function nowMin(){ var d = msk(); return d.getHours() * 60 + d.getMinutes(); }
   function hm(m){ m = ((Math.round(m) % 1440) + 1440) % 1440; return Math.floor(m / 60) + ':' + pad(m % 60); }
-  function locStatus(loc, m){
-    if (m >= loc.open && m < loc.close) {
-      var left = loc.close - m;
-      return { open: true, text: left <= 60 ? 'открыто, закроется через ' + left + ' ' + plural(left, 'минуту', 'минуты', 'минут') : 'открыто до ' + hm(loc.close) };
+  function locStatus(m){
+    if (m >= LOC.open && m < LOC.close) {
+      var left = LOC.close - m;
+      return { open: true, text: left <= 60 ? 'открыто, закроется через ' + left + ' ' + plural(left, 'минуту', 'минуты', 'минут') : 'открыто до ' + hm(LOC.close) };
     }
-    if (m < loc.open) return { open: false, text: 'откроется в ' + hm(loc.open) };
-    return { open: false, text: 'откроется завтра в ' + hm(loc.open) };
+    if (m < LOC.open) return { open: false, text: 'откроется в ' + hm(LOC.open) };
+    return { open: false, text: 'откроется завтра в ' + hm(LOC.open) };
   }
 
   /* ---------- водяной знак, кружевная салфетка, ссылки ---------- */
@@ -1269,11 +1131,10 @@ dialog{color:inherit}
   });
   safe('links', function(){
     var TEXT = {
-      'today': [LOC.novo.wa, 'Здравствуйте! Подскажите, что сегодня есть на витрине из горячего и выпечки?'],
-      'hello-novo': [LOC.novo.wa, 'Здравствуйте! Хочу сделать заказ в the Buffet на Новосёловой.'],
-      'hello-mozh': [LOC.mozh.wa, 'Здравствуйте! Хочу сделать заказ в the Buffet на Можайском.']
+      'today': 'Здравствуйте! Подскажите, какая сегодня выпечка?',
+      'hello': 'Здравствуйте! Хочу сделать заказ в the Buffet на Можайском.'
     };
-    $$('[data-wa]').forEach(function(a){ var t = TEXT[a.getAttribute('data-wa')]; if (t) a.href = waLink(t[0], t[1]); });
+    $$('[data-wa]').forEach(function(a){ var t = TEXT[a.getAttribute('data-wa')]; if (t) a.href = waLink(t); });
   });
 
   /* ---------- заголовок «пишется мелом»: после анимации снимаем обрезку, иначе режется значок над «Й» ---------- */
@@ -1294,6 +1155,16 @@ dialog{color:inherit}
     menuBtn.addEventListener('click', function(){ setMenu(!nav.classList.contains('is-open')); });
     $$('a', nav).forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
   });
+
+  /* ---------- окошки на крыше светятся, пока домик открыт ---------- */
+  function lightDormers(){
+    var open = locStatus(nowMin()).open;
+    $$('.dormer').forEach(function(d, i){
+      if (reduceMotion || !open) { d.classList.toggle('is-lit', open); return; }
+      setTimeout(function(){ d.classList.add('is-lit'); }, 900 + i * 260);
+    });
+  }
+  safe('dormers', lightDormers);
 
   /* ---------- буфет: дверцы и лампочки ---------- */
   safe('cabinet', function(){
@@ -1323,31 +1194,25 @@ dialog{color:inherit}
   });
 
   /* ---------- поднос: состояние ---------- */
-  var tray = { items: [], loc: 'novo', when: '20', time: '', who: '' };
+  var tray = { items: [], when: '20', who: '', wish: '' };
   var whenTouched = false;
   safe('tray-load', function(){
-    var saved = JSON.parse(store.get('tb-tray') || 'null');
+    var saved = JSON.parse(store.get('tb-tray-mozh') || 'null');
     if (saved && Array.isArray(saved.items)) {
-      tray.items = saved.items.filter(function(i){ return i && i.key && i.name && i.price > 0 && i.qty > 0; });
-      if (LOC[saved.loc]) tray.loc = saved.loc;
+      tray.items = saved.items.filter(function(i){ return i && i.key && i.name && i.qty > 0; });
       tray.who = saved.who || '';
     }
   });
-  function saveTray(){ store.set('tb-tray', JSON.stringify({ items: tray.items, loc: tray.loc, who: tray.who })); }
+  function saveTray(){ store.set('tb-tray-mozh', JSON.stringify({ items: tray.items, who: tray.who })); }
   function trayCount(){ return tray.items.reduce(function(s, i){ return s + i.qty; }, 0); }
-  function traySum(){ return tray.items.reduce(function(s, i){ return s + i.qty * i.price; }, 0); }
 
-  function coffeeItem(id, size, milk, syrup){
-    var d = COFFEE.filter(function(c){ return c.id === id; })[0];
-    var one = !!d.p.one;
-    var base = one ? d.p.one : d.p[size];
-    var useMilk = milk && d.milk ? milk : '';
-    var name = d.name + (one ? '' : ', ' + SIZES[size].ml + ' мл') + (useMilk ? ' на ' + MILK[useMilk].adj + ' молоке' : '') + (syrup ? ' + сироп' : '');
-    return { key: ['c', id, one ? 'one' : size, useMilk, syrup ? 1 : 0].join('|'), name: name, price: base + (useMilk ? 50 : 0) + (syrup ? 30 : 0) };
+  function drinkItem(id, syrup){
+    var d = DRINKS.filter(function(x){ return x.id === id; })[0];
+    return { key: 'c|' + id + '|' + (syrup ? 1 : 0), name: d.name + (syrup ? ' с сиропом' : '') };
   }
-  function menuItem(id){
-    var m = MENU.filter(function(x){ return x.id === id; })[0];
-    return { key: 'm|' + id, name: m.name, price: m.price };
+  function bakeItem(id){
+    var b = BAKES.filter(function(x){ return x.id === id; })[0];
+    return { key: 'b|' + id, name: b.name };
   }
 
   var renderTray = function(){};
@@ -1377,7 +1242,7 @@ dialog{color:inherit}
   function addItem(it, from, silent){
     var f = tray.items.filter(function(x){ return x.key === it.key; })[0];
     if (f) f.qty++;
-    else tray.items.push({ key: it.key, name: it.name, price: it.price, qty: 1 });
+    else tray.items.push({ key: it.key, name: it.name, qty: 1 });
     saveTray();
     renderTray();
     if (!silent) fly(from);
@@ -1386,39 +1251,31 @@ dialog{color:inherit}
   /* ---------- первый экран: статус и «что взять сейчас» ---------- */
   var nowPick = [];
   function renderStatus(){
-    var m = nowMin();
+    var m = nowMin(), st = locStatus(m);
     var list = $('#status');
-    list.innerHTML = '';
-    ['novo', 'mozh'].forEach(function(id){
-      var st = locStatus(LOC[id], m);
-      var li = document.createElement('li');
-      if (st.open) li.className = 'is-open';
-      li.innerHTML = '<i aria-hidden="true"></i><span><b>' + LOC[id].short + '</b> — ' + st.text + '</span>';
-      list.appendChild(li);
-      $$('[data-st="' + id + '"]').forEach(function(p){
-        p.classList.toggle('is-open', st.open);
-        p.innerHTML = '<i aria-hidden="true"></i><span><b>' + (st.open ? 'Сейчас открыто' : 'Сейчас закрыто') + '</b> · ' + st.text.replace(/^открыто,?\s*/, '') + '</span>';
-      });
-      $$('[data-st-short="' + id + '"]').forEach(function(s){ s.textContent = LOC[id].hours + ' · ' + st.text; });
-    });
-    var t = hm(m), anyOpen = locStatus(LOC.novo, m).open || locStatus(LOC.mozh, m).open;
-    var title, desc;
-    if (!anyOpen) {
-      title = 'Сейчас ' + t + ' — обе кофейни спят';
-      desc = 'Соберите заказ на утро: капучино и сочник с творогом — 255 ₽. Новосёловой открывается в 9:00.';
-      nowPick = [coffeeItem('cap', 'S', '', false), menuItem('soch')];
-    } else if (m < 11 * 60 + 30) {
+    list.innerHTML = '<li' + (st.open ? ' class="is-open"' : '') + '><i aria-hidden="true"></i><span><b>' + (st.open ? 'Сейчас открыто' : 'Сейчас закрыто') + '</b> — ' + st.text.replace(/^открыто,?\s*/, '') + '</span></li>' +
+      '<li><i aria-hidden="true" style="background:transparent;box-shadow:none"></i><span>Ежедневно ' + LOC.hours + ' · <a href="tel:' + LOC.tel + '" style="text-decoration:none;border-bottom:1px solid var(--chalk-4)">' + LOC.phone + '</a></span></li>';
+    var hs = $('#houseSt');
+    hs.classList.toggle('is-open', st.open);
+    hs.innerHTML = '<i aria-hidden="true"></i><span><b>' + (st.open ? 'Сейчас открыто' : 'Сейчас закрыто') + '</b> · ' + st.text.replace(/^открыто,?\s*/, '') + '</span>';
+    $('#trayStatus').textContent = 'ежедневно ' + LOC.hours + ' · ' + st.text;
+    var t = hm(m), title, desc;
+    if (!st.open) {
+      title = 'Сейчас ' + t + ' — домик ' + (m < LOC.open ? 'ещё' : 'уже') + ' закрыт';
+      desc = 'Соберите заказ ' + (m < LOC.open ? 'к открытию' : 'на завтра') + ': капучино и рогалик с маком. Откроется в ' + hm(LOC.open) + '.';
+      nowPick = [drinkItem('cap', false), bakeItem('rog')];
+    } else if (m < 12 * 60) {
       title = 'Сейчас ' + t + ' — утро';
-      desc = 'Капучино 250 мл и сочник с творогом — 255 ₽.';
-      nowPick = [coffeeItem('cap', 'S', '', false), menuItem('soch')];
-    } else if (m < 16 * 60) {
+      desc = 'Капучино и рогалик с маком — приготовят к вашему приходу.';
+      nowPick = [drinkItem('cap', false), bakeItem('rog')];
+    } else if (m < 15 * 60) {
       title = 'Сейчас ' + t + ' — время обеда';
-      desc = 'Горячее из витрины и чай — 430 ₽. Например, плов со свининой.';
-      nowPick = [menuItem('plov'), coffeeItem('tea', 'one', '', false)];
+      desc = 'Латте и кусок пирога со сливой — отложат для вас.';
+      nowPick = [drinkItem('lat', false), bakeItem('plum')];
     } else {
-      title = 'Сейчас ' + t + ' — вечер';
-      desc = 'Какао 350 мл и брауни с грецким орехом — 330 ₽.';
-      nowPick = [coffeeItem('coc', 'M', '', false), menuItem('brow')];
+      title = 'Сейчас ' + t + ' — время полдника';
+      desc = 'Американо и пирожки — успейте до ' + hm(LOC.close) + '.';
+      nowPick = [drinkItem('ame', false), bakeItem('pies')];
     }
     $('#nowT').textContent = title;
     $('#nowD').textContent = desc;
@@ -1433,62 +1290,40 @@ dialog{color:inherit}
     });
   });
 
-  /* ---------- конструктор кофе ---------- */
+  /* ---------- кофе «в разрезе» ---------- */
   safe('coffee', function(){
-    var cs = { id: 'cap', size: 'M', milk: '', syrup: false };
+    var cs = { id: 'cap', syrup: false };
     var list = $('#drinks');
     var circ = '<svg class="circ" viewBox="0 0 300 50" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 26 C3 7 70 3 150 4 C234 5 297 9 297 25 C297 43 222 48 150 47 C70 46 1 42 8 19"/></svg>';
-    COFFEE.forEach(function(d){
+    DRINKS.forEach(function(d){
       var li = document.createElement('li');
-      var prices = ['S', 'M', 'L'].map(function(s, k){ return '<span class="drink__p">' + ((d.p.one && !k ? d.p.one : d.p[s]) || '') + '</span>'; }).join('');
-      var label = d.name + ': ' + (d.p.one ? d.p.one + ' рублей' : ['S', 'M', 'L'].filter(function(s){ return d.p[s]; }).map(function(s){ return SIZES[s].ml + ' мл — ' + d.p[s]; }).join(', ') + ' рублей');
-      li.innerHTML = '<button class="drink" type="button" role="radio" aria-checked="false" data-id="' + d.id + '" aria-label="' + label + '">' + circ + '<span class="drink__n">' + d.name + '</span>' + prices + '</button>';
+      li.innerHTML = '<button class="drink" type="button" role="radio" aria-checked="false" data-id="' + d.id + '">' + circ + '<span class="drink__n">' + d.name + '</span><span class="drink__r">' + d.about + '</span></button>';
       list.appendChild(li);
     });
-    var drinkBtns = $$('.drink', list), sizeBtns = $$('#sizes .size'), milkBtns = $$('#milk .pick'), syrupBtn = $('#syrup');
+    var drinkBtns = $$('.drink', list), syrupBtn = $('#syrup');
     var layersEl = $('#layers'), labelsEl = $('#labels'), glass = $('#glass');
     var L = [], T = [];
     for (var i = 0; i < 4; i++) {
       var ly = document.createElement('div'); ly.className = 'layer'; layersEl.appendChild(ly); L.push(ly);
       var lb = document.createElement('span'); lb.className = 'lbl'; labelsEl.appendChild(lb); T.push(lb);
     }
-    var ESP = '#3a2215', FOAM = '#f6f0e4';
-    function recipe(d, milkC){
-      var milkName = cs.milk && d.milk ? MILK[cs.milk].label : 'молоко';
-      switch (d.id) {
+    var ESP = '#3a2215', MILK = '#ece0cb', FOAM = '#f6f0e4';
+    function recipe(id){
+      switch (id) {
         case 'esp': return [['эспрессо', ESP, .6], ['крема', '#b8743a', .16]];
         case 'ame': return [['эспрессо', ESP, .22], ['горячая вода', '#6b462b', .58], ['крема', '#a8682f', .06]];
-        case 'cap': return [['эспрессо', ESP, .2], [milkName, milkC, .36], ['пена', FOAM, .3, 1]];
-        case 'lat': return [['эспрессо', ESP, .14], [milkName, milkC, .6], ['пена', FOAM, .12, 1]];
-        case 'flat': return [['двойной эспрессо', ESP, .3], [milkName, milkC, .48], ['пена', FOAM, .07, 1]];
-        case 'raf': return [[cs.milk ? 'раф на ' + MILK[cs.milk].adj : 'эспрессо + сливки', cs.milk ? milkC : '#d6b48a', .72], ['пенка', FOAM, .14, 1]];
-        case 'coc': return [['какао', '#7a4a2e', .62], ['пена', FOAM, .2, 1]];
-        case 'cho': return [['горячий шоколад', '#4a2616', .82]];
-        default: return [['чай', '#b4651d', .82]];
+        case 'cap': return [['эспрессо', ESP, .2], ['молоко', MILK, .36], ['пена', FOAM, .3, 1]];
+        default: return [['эспрессо', ESP, .14], ['молоко', MILK, .6], ['пена', FOAM, .12, 1]];
       }
     }
     function render(){
-      var d = COFFEE.filter(function(c){ return c.id === cs.id; })[0];
-      var one = !!d.p.one;
-      if (!one && !d.p[cs.size]) cs.size = d.p.M ? 'M' : (d.p.S ? 'S' : 'L');
+      var d = DRINKS.filter(function(x){ return x.id === cs.id; })[0];
       drinkBtns.forEach(function(b){ b.setAttribute('aria-checked', b.getAttribute('data-id') === cs.id ? 'true' : 'false'); });
-      sizeBtns.forEach(function(b){
-        var s = b.getAttribute('data-size');
-        b.disabled = one || !d.p[s];
-        b.setAttribute('aria-checked', !one && s === cs.size ? 'true' : 'false');
-      });
-      milkBtns.forEach(function(b){
-        b.disabled = !d.milk;
-        b.setAttribute('aria-checked', (d.milk ? cs.milk : '') === b.getAttribute('data-milk') ? 'true' : 'false');
-      });
       syrupBtn.setAttribute('aria-pressed', cs.syrup ? 'true' : 'false');
-      var item = coffeeItem(cs.id, cs.size, cs.milk, cs.syrup);
-      $('#brewName').textContent = item.name;
-      $('#brewPrice').textContent = rub(item.price);
-      var gh = one ? d.h : SIZES[cs.size].h;
+      $('#brewName').textContent = drinkItem(cs.id, cs.syrup).name;
+      var gh = d.h;
       glass.style.setProperty('--gh', gh + 'px');
-      var milkC = cs.milk && d.milk ? MILK[cs.milk].c : '#ece0cb';
-      var rec = recipe(d, milkC);
+      var rec = recipe(cs.id);
       if (cs.syrup) {
         var big = 0;
         rec.forEach(function(r, k){ if (r[2] > rec[big][2]) big = k; });
@@ -1506,8 +1341,7 @@ dialog{color:inherit}
         pos.push((acc + r[2] / 2) * gh);
         acc += r[2];
       });
-      var minGap = 24;
-      for (var k = 1; k < pos.length; k++) if (pos[k] - pos[k - 1] < minGap) pos[k] = pos[k - 1] + minGap;
+      for (var k = 1; k < pos.length; k++) if (pos[k] - pos[k - 1] < 24) pos[k] = pos[k - 1] + 24;
       T.forEach(function(el, k){
         var r = rec[k];
         el.style.opacity = r ? 1 : 0;
@@ -1515,48 +1349,47 @@ dialog{color:inherit}
       });
     }
     drinkBtns.forEach(function(b){ b.addEventListener('click', function(){ cs.id = b.getAttribute('data-id'); render(); }); });
-    sizeBtns.forEach(function(b){ b.addEventListener('click', function(){ cs.size = b.getAttribute('data-size'); render(); }); });
-    milkBtns.forEach(function(b){ b.addEventListener('click', function(){ cs.milk = b.getAttribute('data-milk'); render(); }); });
     syrupBtn.addEventListener('click', function(){ cs.syrup = !cs.syrup; render(); });
     $('#brewAdd').addEventListener('click', function(e){
-      var it = coffeeItem(cs.id, cs.size, cs.milk, cs.syrup);
+      var it = drinkItem(cs.id, cs.syrup);
       addItem(it, e.currentTarget);
       toast(it.name + ' — на подносе');
     });
     list.addEventListener('keydown', function(e){
       if (['ArrowDown', 'ArrowUp'].indexOf(e.key) < 0) return;
       e.preventDefault();
-      var idx = COFFEE.map(function(c){ return c.id; }).indexOf(cs.id);
-      idx = (idx + (e.key === 'ArrowDown' ? 1 : -1) + COFFEE.length) % COFFEE.length;
-      cs.id = COFFEE[idx].id; render(); drinkBtns[idx].focus();
+      var idx = DRINKS.map(function(x){ return x.id; }).indexOf(cs.id);
+      idx = (idx + (e.key === 'ArrowDown' ? 1 : -1) + DRINKS.length) % DRINKS.length;
+      cs.id = DRINKS[idx].id; render(); drinkBtns[idx].focus();
     });
     render();
   });
 
-  /* ---------- витрина: ценники-кнопки ---------- */
-  safe('case', function(){
-    var R = seeded(5);
-    MENU.forEach(function(m){
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'tag' + (m.hot ? ' tag--hot' : '');
-      b.setAttribute('data-id', m.id);
-      b.style.setProperty('--r', ((R() - .5) * 5).toFixed(1) + 'deg');
-      b.setAttribute('aria-label', m.name + ', ' + m.price + ' рублей. Положить на поднос');
-      b.innerHTML = '<span class="tag__n">' + m.name + '</span><span class="tag__p">' + m.price + ' ₽<span class="tag__plus" aria-hidden="true">+</span></span><span class="tag__count" aria-hidden="true"></span>';
-      b.addEventListener('click', function(){ addItem(menuItem(m.id), b); });
-      $(m.cat === 'sweet' ? '#tagsSweet' : '#tagsMeal').appendChild(b);
+  /* ---------- выпечка: тарелки-кнопки ---------- */
+  safe('bakes', function(){
+    var box = $('#bakesList'), ask = $('.bake--ask', box);
+    BAKES.forEach(function(b){
+      var el = document.createElement('button');
+      el.type = 'button';
+      el.className = 'bake rv';
+      el.setAttribute('data-id', b.id);
+      el.setAttribute('aria-label', b.name + ', ' + b.about + '. Положить на поднос');
+      el.innerHTML = '<span class="plate"><img src="img/' + b.img + '-600.webp" alt="" loading="lazy" decoding="async"></span>' +
+        '<span class="bake__wm">демо — Д. Стрепенюк</span><span class="bake__n">' + b.name + '</span><span class="bake__d">' + b.about + '</span>' +
+        '<span class="bake__add">+ на поднос</span><span class="bake__count" aria-hidden="true"></span>';
+      el.addEventListener('click', function(){ addItem(bakeItem(b.id), $('.plate', el)); });
+      box.insertBefore(el, ask);
     });
   });
 
   /* ---------- поднос: окно, время, сообщение ---------- */
   safe('tray', function(){
     var dlg = $('#tray'), linesEl = $('#lines'), emptyEl = $('#empty');
-    var whenBtns = $$('#when .pick'), timeIn = $('#timeIn'), timeVal = $('#timeVal'), who = $('#who');
+    var whenBtns = $$('#when .pick'), timeIn = $('#timeIn'), timeVal = $('#timeVal'), who = $('#who'), wish = $('#wish');
     var QUICK = [
-      { label: 'Капучино и сочник · 255 ₽', items: function(){ return [coffeeItem('cap', 'S', '', false), menuItem('soch')]; } },
-      { label: 'Обед и чай · 430 ₽', items: function(){ return [menuItem('plov'), coffeeItem('tea', 'one', '', false)]; } },
-      { label: 'Раф и эклер · 345 ₽', items: function(){ return [coffeeItem('raf', 'M', '', false), menuItem('ekl')]; } }
+      { label: 'Капучино и рогалик', items: function(){ return [drinkItem('cap', false), bakeItem('rog')]; } },
+      { label: 'Латте и пирог со сливой', items: function(){ return [drinkItem('lat', false), bakeItem('plum')]; } },
+      { label: 'Американо и пирожки', items: function(){ return [drinkItem('ame', false), bakeItem('pies')]; } }
     ];
     QUICK.forEach(function(q){
       var b = document.createElement('button');
@@ -1567,24 +1400,23 @@ dialog{color:inherit}
     });
     $('#rcDate').textContent = msk().toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
     who.value = tray.who;
-    $$('#locs input').forEach(function(r){ r.checked = r.value === tray.loc; });
 
-    function defaultTime(loc){
+    function defaultTime(){
       var m = nowMin();
-      var t = m < loc.open ? loc.open + 15 : (m >= loc.close - 20 ? loc.open + 15 : m + 30);
+      var t = m < LOC.open ? LOC.open + 15 : (m >= LOC.close - 20 ? LOC.open + 15 : m + 30);
       t = Math.ceil(t / 5) * 5;
       return pad(Math.floor(t / 60) % 24) + ':' + pad(t % 60);
     }
     function autoWhen(){
-      var loc = LOC[tray.loc], m = nowMin();
-      var openLongEnough = m >= loc.open && m + 20 <= loc.close - 5;
-      if (!openLongEnough) { tray.when = 'time'; timeVal.value = defaultTime(loc); }
+      var m = nowMin();
+      var openLongEnough = m >= LOC.open && m + 20 <= LOC.close - 5;
+      if (!openLongEnough) { tray.when = 'time'; timeVal.value = defaultTime(); }
       else if (tray.when === 'time' && !whenTouched) tray.when = '20';
     }
     function pickup(){
-      var loc = LOC[tray.loc], m = nowMin(), t, label, tomorrow = false;
+      var m = nowMin(), t, label, tomorrow = false;
       if (tray.when === 'time') {
-        var v = (timeVal.value || defaultTime(loc)).split(':');
+        var v = (timeVal.value || defaultTime()).split(':');
         t = (+v[0]) * 60 + (+v[1] || 0);
         if (t < m - 5) tomorrow = true;
         label = (tomorrow ? 'завтра ' : '') + 'к ' + hm(t);
@@ -1593,38 +1425,32 @@ dialog{color:inherit}
         if (t >= 1440) { tomorrow = true; t -= 1440; }
         label = 'через ' + tray.when + ' минут, к ' + hm(t);
       }
-      var ok = t >= loc.open && t <= loc.close - 5;
       var warn = '';
-      if (!ok) {
-        warn = t < loc.open ? 'К ' + hm(t) + ' кафе ' + loc.where + ' ещё закрыто: работает ' + loc.hours + '. Выберите время после ' + hm(loc.open) + '.'
-                            : 'К ' + hm(t) + ' кафе ' + loc.where + ' уже закроется: работает ' + loc.hours + '. Выберите время пораньше.';
-      }
+      if (t < LOC.open) warn = 'К ' + hm(t) + ' домик ещё закрыт: работает ' + LOC.hours + '. Выберите время после ' + hm(LOC.open) + '.';
+      else if (t > LOC.close - 5) warn = 'К ' + hm(t) + ' домик уже закроется: работает ' + LOC.hours + '. Выберите время пораньше.';
       return { label: label, warn: warn };
     }
     function message(){
-      var loc = LOC[tray.loc], p = pickup();
-      var lines = ['Здравствуйте! Хочу сделать предзаказ.', 'Где: ' + loc.full, 'Когда: ' + p.label];
+      var p = pickup();
+      var lines = ['Здравствуйте! Хочу сделать предзаказ в the Buffet на Можайском, 55.', 'Когда: ' + p.label];
       if (tray.items.length) {
         lines.push('');
-        tray.items.forEach(function(i){ lines.push('— ' + i.name + (i.qty > 1 ? ' × ' + i.qty : '') + ' — ' + (i.qty * i.price) + ' ₽'); });
-        lines.push('Итого: ' + traySum() + ' ₽');
-      } else lines.push('Подскажите, что сегодня есть на витрине?');
+        tray.items.forEach(function(i){ lines.push('— ' + i.name + (i.qty > 1 ? ' × ' + i.qty : '')); });
+      } else lines.push('Подскажите, какая сегодня выпечка?');
+      if (tray.wish.trim()) lines.push('Пожелания: ' + tray.wish.trim());
       if (tray.who.trim()) lines.push('Имя: ' + tray.who.trim());
       return lines.join('\n');
     }
     renderTray = function(){
-      var n = trayCount(), s = traySum();
+      var n = trayCount();
       $('#fabN').textContent = n;
-      $('#fabSum').textContent = rub(s);
       $('#trayFab').classList.toggle('is-on', n > 0);
       $('#mN').textContent = n ? 'Поднос · ' + n : 'Поднос';
-      $('#mSum').textContent = n ? rub(s) : '';
       linesEl.innerHTML = '';
       tray.items.forEach(function(it, idx){
         var li = document.createElement('li');
         li.className = 'line';
-        li.innerHTML = '<span class="line__n"></span><span class="line__s">' + rub(it.qty * it.price) + '</span>' +
-          '<span class="qty"><button type="button" data-d="-1" aria-label="Убрать одну">−</button><span>' + it.qty + '</span><button type="button" data-d="1" aria-label="Добавить ещё">+</button><em>× ' + rub(it.price) + '</em></span>';
+        li.innerHTML = '<span class="line__n"></span><span class="qty"><button type="button" data-d="-1" aria-label="Убрать одну">−</button><span>' + it.qty + '</span><button type="button" data-d="1" aria-label="Добавить ещё">+</button></span>';
         $('.line__n', li).textContent = it.name;
         $$('button', li).forEach(function(b){
           b.addEventListener('click', function(){
@@ -1636,72 +1462,46 @@ dialog{color:inherit}
         linesEl.appendChild(li);
       });
       emptyEl.hidden = n > 0;
-      $('#total').textContent = rub(s);
-      $$('.tag').forEach(function(t){
-        var it = tray.items.filter(function(x){ return x.key === 'm|' + t.getAttribute('data-id'); })[0];
-        t.classList.toggle('has-count', !!it);
-        $('.tag__count', t).textContent = it ? '×' + it.qty : '';
+      $('#total').textContent = n;
+      $$('.bake[data-id]').forEach(function(b){
+        var it = tray.items.filter(function(x){ return x.key === 'b|' + b.getAttribute('data-id'); })[0];
+        b.classList.toggle('has-count', !!it);
+        $('.bake__count', b).textContent = it ? '×' + it.qty : '';
       });
       if (!whenTouched) autoWhen();
       whenBtns.forEach(function(b){ b.setAttribute('aria-checked', b.getAttribute('data-when') === tray.when ? 'true' : 'false'); });
       timeIn.classList.toggle('is-on', tray.when === 'time');
-      var p = pickup(), loc = LOC[tray.loc];
-      $('#eta').innerHTML = 'Заберёте <b></b> · ' + loc.full;
+      var p = pickup();
+      $('#eta').innerHTML = 'Заберёте <b></b> · ' + LOC.full;
       $('#eta b').textContent = p.label;
       $('#warn').hidden = !p.warn;
       $('#warn').textContent = p.warn;
-      $('#sendWa').href = waLink(loc.wa, message());
-      $('#sendTel').href = 'tel:' + loc.tel;
+      $('#sendWa').href = waLink(message());
     };
     whenBtns.forEach(function(b){
       b.addEventListener('click', function(){
         whenTouched = true;
         tray.when = b.getAttribute('data-when');
-        if (tray.when === 'time' && !timeVal.value) timeVal.value = defaultTime(LOC[tray.loc]);
+        if (tray.when === 'time' && !timeVal.value) timeVal.value = defaultTime();
         renderTray();
         if (tray.when === 'time') timeVal.focus();
       });
     });
     timeVal.addEventListener('input', function(){ whenTouched = true; renderTray(); });
     who.addEventListener('input', function(){ tray.who = who.value; saveTray(); renderTray(); });
-    $$('#locs input').forEach(function(r){
-      r.addEventListener('change', function(){ tray.loc = r.value; whenTouched = false; saveTray(); renderTray(); });
-    });
+    wish.addEventListener('input', function(){ tray.wish = wish.value; renderTray(); });
     $$('[data-open-tray]').forEach(function(b){ b.addEventListener('click', function(){ renderTray(); openDialog(dlg); }); });
     $('#trayClose').addEventListener('click', function(){ closeDialog(dlg); });
-    closeOnBackdrop(dlg);
-    $('#sendWa').addEventListener('click', function(){ if (!tray.items.length) toast('Поднос пуст — спросим, что есть на витрине'); });
+    dlg.addEventListener('click', function(e){ if (e.target === dlg) closeDialog(dlg); });
+    $('#sendWa').addEventListener('click', function(){ if (!tray.items.length) toast('Поднос пуст — спросим, какая сегодня выпечка'); });
     renderTray();
-  });
-
-  /* ---------- мобильная панель: выбор точки для звонка и WhatsApp ---------- */
-  safe('pick', function(){
-    var dlg = $('#pickd'), listEl = $('#pickList');
-    $$('[data-pick]').forEach(function(b){
-      b.addEventListener('click', function(){
-        var kind = b.getAttribute('data-pick');
-        $('#pickT').textContent = kind === 'wa' ? 'Написать в WhatsApp' : 'Позвонить';
-        listEl.innerHTML = '';
-        ['novo', 'mozh'].forEach(function(id){
-          var loc = LOC[id], st = locStatus(loc, nowMin());
-          var a = document.createElement('a');
-          a.href = kind === 'wa' ? waLink(loc.wa, 'Здравствуйте! Хочу сделать заказ в the Buffet ' + loc.where + '.') : 'tel:' + loc.tel;
-          if (kind === 'wa') { a.target = '_blank'; a.rel = 'noopener'; }
-          a.innerHTML = '<span><b>' + loc.short + '</b><small>' + loc.phone + ' · ' + st.text + '</small></span><svg class="ico"><use href="#i-' + (kind === 'wa' ? 'wa' : 'tel') + '"/></svg>';
-          listEl.appendChild(a);
-        });
-        openDialog(dlg);
-      });
-    });
-    $('#pickClose').addEventListener('click', function(){ closeDialog(dlg); });
-    closeOnBackdrop(dlg);
   });
 
   /* ---------- расписка «С меня кофе» ---------- */
   safe('iou', function(){
-    var WHAT = ['капучино', 'раф', 'латте', 'флэт уайт', 'какао', 'горячий шоколад', 'кофе и сочник', 'обед и чай'];
+    var WHAT = ['капучино', 'латте', 'американо', 'кофе и рогалик с маком', 'кофе и пирожок', 'кусок пирога со сливой'];
     var WHY = ['за помощь', 'просто так', 'за хорошие новости', 'за проигранный спор', 'за терпение', 'за то, что ты есть'];
-    var st = { owe: 'должна', what: 'капучино', why: 'за помощь', loc: 'novo' };
+    var st = { owe: 'должна', what: 'капучино', why: 'за помощь' };
     var sel = $('#iWhat');
     WHAT.forEach(function(w){ var o = document.createElement('option'); o.value = o.textContent = w; sel.appendChild(o); });
     var whyBox = $('#iWhy');
@@ -1745,7 +1545,6 @@ dialog{color:inherit}
       L.restore();
     }
     function draw(){
-      var loc = LOC[st.loc];
       var from = ($('#iFrom').value || '').trim() || 'Маша';
       var to = ($('#iTo').value || '').trim() || 'Пете';
       var g = cx.createLinearGradient(0, 0, W, H);
@@ -1791,9 +1590,9 @@ dialog{color:inherit}
       L.fillStyle = 'rgba(239,233,221,.74)'; L.font = '400 32px "Golos Text", Arial, sans-serif';
       L.fillText('Погасить долг можно в the Buffet:', W / 2, 1082);
       L.fillStyle = '#efe9dd'; L.font = '600 46px "Golos Text", Arial, sans-serif';
-      L.fillText(loc.full, W / 2, 1136);
+      L.fillText(LOC.full + ', Одинцово', W / 2, 1136);
       L.fillStyle = 'rgba(239,233,221,.74)'; L.font = '400 32px "Golos Text", Arial, sans-serif';
-      L.fillText('Одинцово · ежедневно ' + loc.hours, W / 2, 1182);
+      L.fillText('домик у медцентра · ежедневно ' + LOC.hours, W / 2, 1182);
       L.textAlign = 'left'; L.font = '400 28px "Golos Text", Arial, sans-serif'; L.fillStyle = 'rgba(239,233,221,.6)';
       L.fillText('подпись', 128, 1240);
       var SR = seeded(hash(from) + 3);
@@ -1812,19 +1611,16 @@ dialog{color:inherit}
     function syncChips(){
       $$('#iOwe .pick').forEach(function(b){ b.setAttribute('aria-checked', b.getAttribute('data-owe') === st.owe ? 'true' : 'false'); });
       $$('#iWhy .pick').forEach(function(b){ b.setAttribute('aria-checked', b.getAttribute('data-why') === st.why ? 'true' : 'false'); });
-      $$('#iWhere .pick').forEach(function(b){ b.setAttribute('aria-checked', b.getAttribute('data-loc') === st.loc ? 'true' : 'false'); });
       sel.value = st.what;
     }
     $$('#iOwe .pick').forEach(function(b){ b.addEventListener('click', function(){ st.owe = b.getAttribute('data-owe'); syncChips(); redraw(); }); });
     $$('#iWhy .pick').forEach(function(b){ b.addEventListener('click', function(){ st.why = b.getAttribute('data-why'); syncChips(); redraw(); }); });
-    $$('#iWhere .pick').forEach(function(b){ b.addEventListener('click', function(){ st.loc = b.getAttribute('data-loc'); syncChips(); redraw(); }); });
     sel.addEventListener('change', function(){ st.what = sel.value; redraw(); });
     $('#iFrom').addEventListener('input', redraw);
     $('#iTo').addEventListener('input', redraw);
     $('#iDice').addEventListener('click', function(){
-      var R = Math.random;
-      st.what = WHAT[Math.floor(R() * WHAT.length)];
-      st.why = WHY[Math.floor(R() * WHY.length)];
+      st.what = WHAT[Math.floor(Math.random() * WHAT.length)];
+      st.why = WHY[Math.floor(Math.random() * WHY.length)];
       syncChips(); redraw();
     });
     function withBlob(cb){
@@ -1839,8 +1635,8 @@ dialog{color:inherit}
       setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1500);
     }
     function shareText(){
-      var loc = LOC[st.loc], from = ($('#iFrom').value || '').trim() || 'Маша';
-      return from + ': «Я ' + st.owe + ' тебе ' + st.what + (st.why ? ' ' + st.why : '') + '». Погашу в the Buffet — ' + loc.full + ', Одинцово, ежедневно ' + loc.hours + '.';
+      var from = ($('#iFrom').value || '').trim() || 'Маша';
+      return from + ': «Я ' + st.owe + ' тебе ' + st.what + (st.why ? ' ' + st.why : '') + '». Погашу в the Buffet — ' + LOC.full + ', Одинцово, домик у медцентра, ежедневно ' + LOC.hours + '.';
     }
     $('#iSave').addEventListener('click', function(){ withBlob(function(b){ download(b); toast('Открытка сохранена'); }); });
     $('#iShare').addEventListener('click', function(){
@@ -1871,6 +1667,7 @@ dialog{color:inherit}
   });
 
   /* ---------- фотоальбом и лайтбокс ---------- */
+  var showPhoto = function(){};
   safe('gallery', function(){
     var gal = $('#gal'), lb = $('#lb'), img = $('#lbImg'), cap = $('#lbCap'), cur = 0;
     PHOTOS.forEach(function(p, i){
@@ -1892,12 +1689,8 @@ dialog{color:inherit}
       cap.textContent = p.cap + ' · ' + (cur + 1) + ' из ' + PHOTOS.length;
       openDialog(lb);
     }
-    $$('[data-lb]').forEach(function(b){
-      b.addEventListener('click', function(){
-        var f = b.getAttribute('data-lb');
-        show(Math.max(0, PHOTOS.map(function(p){ return p.f; }).indexOf(f)));
-      });
-    });
+    showPhoto = function(f){ var i = PHOTOS.map(function(p){ return p.f; }).indexOf(f); if (i >= 0) show(i); };
+    $$('[data-lb]').forEach(function(b){ b.addEventListener('click', function(){ showPhoto(b.getAttribute('data-lb')); }); });
     $('#lbPrev').addEventListener('click', function(){ show(cur - 1); });
     $('#lbNext').addEventListener('click', function(){ show(cur + 1); });
     $('#lbClose').addEventListener('click', function(){ closeDialog(lb); });
@@ -1916,12 +1709,38 @@ dialog{color:inherit}
     });
   });
 
+  /* ---------- домик: лето / зима ---------- */
+  safe('house', function(){
+    var SEASON = {
+      summer: { f: 'house-mozh', w: 960, alt: 'Деревянный домик the Buffet с круглой крышей летом' },
+      winter: { f: 'winter-mozh', w: 1200, alt: 'Домик the Buffet зимой, вход с гирляндой' }
+    };
+    var cur = 'summer', img = $('#houseImg'), btns = $$('.season .pick');
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        cur = b.getAttribute('data-season');
+        var s = SEASON[cur];
+        btns.forEach(function(x){ x.setAttribute('aria-checked', x === b ? 'true' : 'false'); });
+        img.style.opacity = .2;
+        var next = new Image();
+        next.onload = next.onerror = function(){
+          img.srcset = 'img/' + s.f + '-600.webp 600w, img/' + s.f + '-1200.webp ' + s.w + 'w';
+          img.src = 'img/' + s.f + '-600.webp';
+          img.alt = s.alt;
+          img.style.opacity = 1;
+        };
+        next.src = 'img/' + s.f + '-600.webp';
+      });
+    });
+    $('#housePh').addEventListener('click', function(){ showPhoto(SEASON[cur].f); });
+  });
+
   /* ---------- карта по клику ---------- */
   safe('map', function(){
     $('#mapBtn').addEventListener('click', function(){
       var f = document.createElement('iframe');
-      f.src = 'https://yandex.ru/map-widget/v1/?ll=37.2650%2C55.6745&z=15&pt=37.259298%2C55.676189%2Cpm2rdl1~37.270790%2C55.672860%2Cpm2rdl2';
-      f.title = 'Карта: the Buffet на Новосёловой, 18 и на Можайском шоссе, 55';
+      f.src = 'https://yandex.ru/map-widget/v1/?ll=37.270790%2C55.672860&z=16&pt=37.270790%2C55.672860%2Cpm2rdl';
+      f.title = 'Карта: the Buffet, Можайское шоссе, 55';
       f.loading = 'lazy';
       f.setAttribute('allowfullscreen', '');
       var map = $('#map');
