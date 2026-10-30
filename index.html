@@ -134,16 +134,17 @@ h1,h2,h3{margin:0;font-weight:700}
 .hero{position:relative;padding:clamp(18px,4vw,48px) 0 clamp(70px,9vw,120px);overflow:hidden}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(28px,5vw,80px);align-items:center}
 .eyebrow{margin:0 0 6px;font:400 27px/1.1 var(--f-hand);color:var(--yellow)}
-.hero__title{font:700 clamp(76px,10.6vw,150px)/.84 var(--f-chalk);letter-spacing:.005em;text-transform:uppercase}
+.hero__title{margin-top:.1em;font:700 clamp(76px,10.6vw,150px)/1 var(--f-chalk);letter-spacing:.005em;text-transform:uppercase}
 .hero__title span{display:block}
 .hero__title .ul{position:relative;display:inline-block}
 .hero__title .ul svg{position:absolute;left:-2%;right:-2%;bottom:-.08em;width:104%;height:.22em;overflow:visible}
 .hero__title .ul path{fill:none;stroke:var(--yellow);stroke-width:5;stroke-linecap:round;stroke-dasharray:700;stroke-dashoffset:0}
-.js .hero__title>span{clip-path:inset(-10% 100% -20% 0);animation:write 1s cubic-bezier(.5,.1,.3,1) forwards}
+.js .hero__title>span{clip-path:inset(-70% 100% -45% -8%);animation:write 1s cubic-bezier(.5,.1,.3,1) forwards}
+.js .hero__title>span.is-done{animation:none;clip-path:none}
 .js .hero__title>span:nth-child(1){animation-delay:.35s}
 .js .hero__title>span:nth-child(2){animation-delay:1.05s}
 .js .hero__title .ul path{stroke-dashoffset:700;animation:draw .8s 1.9s ease forwards}
-@keyframes write{to{clip-path:inset(-10% -4% -20% 0)}}
+@keyframes write{to{clip-path:inset(-70% -10% -45% -8%)}}
 @keyframes draw{to{stroke-dashoffset:0}}
 .hero__lead{max-width:560px;margin:24px 0 0;font-size:19px;color:var(--chalk-2)}
 .hero__lead b{color:var(--chalk);font-weight:600}
@@ -227,7 +228,7 @@ h1,h2,h3{margin:0;font-weight:700}
 .sec--tight{padding-top:clamp(40px,6vw,70px)}
 .shelf-label{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font:600 13px/1 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
 .shelf-label::before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
-.h2{font:700 clamp(50px,6.6vw,92px)/.92 var(--f-chalk);letter-spacing:.01em}
+.h2{font:700 clamp(50px,6.6vw,92px)/1 var(--f-chalk);letter-spacing:.01em}
 .sec__lead{max-width:660px;margin-top:18px;font-size:18px;color:var(--chalk-2)}
 .sec__head{position:relative}
 .sec__head .owner-note{margin-top:24px}
@@ -534,6 +535,7 @@ dialog{color:inherit}
   .site-header>.wrap>.owner-toggle{display:none}
   .menu-btn{display:inline-flex;align-items:center}
   .hero__grid{grid-template-columns:1fr}
+  .hero__title{font-size:clamp(76px,14vw,128px)}
   .cabinet{margin-top:10px}
   .coffee__grid,.iou__grid,.notes__grid{grid-template-columns:1fr}
   .brew{position:relative;top:auto}
@@ -1272,6 +1274,13 @@ dialog{color:inherit}
       'hello-mozh': [LOC.mozh.wa, 'Здравствуйте! Хочу сделать заказ в the Buffet на Можайском.']
     };
     $$('[data-wa]').forEach(function(a){ var t = TEXT[a.getAttribute('data-wa')]; if (t) a.href = waLink(t[0], t[1]); });
+  });
+
+  /* ---------- заголовок «пишется мелом»: после анимации снимаем обрезку, иначе режется значок над «Й» ---------- */
+  safe('title', function(){
+    $$('.hero__title > span').forEach(function(s){
+      s.addEventListener('animationend', function(e){ if (e.target === s) s.classList.add('is-done'); });
+    });
   });
 
   /* ---------- шапка ---------- */
